@@ -1,0 +1,136 @@
+import React from 'react';
+import { motion } from 'motion/react';
+import { Award, BookOpen, CheckCircle2, ChevronRight } from 'lucide-react';
+import { JOURNEY_MILESTONES } from '../data/portfolioData';
+
+export const Academics: React.FC = () => {
+  return (
+    <section
+      id="journey"
+      className="py-24 sm:py-32 bg-white border-b border-zinc-200/80 relative overflow-hidden"
+      aria-labelledby="journey-heading"
+    >
+      <span id="academics" className="sr-only" aria-hidden="true" />
+
+      {/* Decorative background grid tile */}
+      <div 
+        className="absolute top-20 left-[6%] w-16 h-16 bg-purple-500/5 border border-purple-300/20 rounded-sm pointer-events-none hidden md:block" 
+        aria-hidden="true" 
+      />
+
+      <div className="max-w-7xl mx-auto px-6 sm:px-8">
+        
+        {/* Section Header with Large Typography */}
+        <div className="max-w-3xl mb-16 sm:mb-20">
+          <div className="inline-flex items-center gap-2 mb-3">
+            <span className="w-2 h-2 rounded-full bg-purple-600" />
+            <span className="text-xs font-bold tracking-[0.2em] text-purple-700 uppercase">
+              Academic Timeline
+            </span>
+          </div>
+
+          <h2
+            id="journey-heading"
+            className="font-display text-4xl sm:text-6xl font-extrabold tracking-tight text-zinc-950 mb-5 leading-none"
+          >
+            MY JOURNEY<span className="text-purple-600">.</span>
+          </h2>
+
+          <p className="text-base sm:text-lg text-zinc-600 font-normal leading-relaxed">
+            A chronological timeline of academic performance, mathematical foundations, and ongoing computer science studies at SRM University-AP.
+          </p>
+        </div>
+
+        {/* Visual Timeline Layout */}
+        <div className="relative">
+          {/* Subtle horizontal timeline track for larger screens */}
+          <div className="hidden lg:block absolute top-28 left-8 right-8 h-[2px] bg-purple-100 -z-0" />
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
+            {JOURNEY_MILESTONES.map((milestone, idx) => (
+              <motion.div
+                key={milestone.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.12 }}
+                className="bg-[#fafafc] rounded-3xl p-8 border border-zinc-200/90 shadow-xs hover:border-purple-200 transition-all flex flex-col justify-between group"
+              >
+                <div>
+                  {/* Step indicator & Period */}
+                  <div className="flex items-center justify-between pb-5 mb-6 border-b border-zinc-200/80">
+                    <div className="flex items-center gap-2">
+                      <span className="w-6 h-6 rounded-full bg-purple-600 text-white text-xs font-bold flex items-center justify-center">
+                        0{idx + 1}
+                      </span>
+                      <span className="text-xs font-mono-meta font-semibold text-purple-700 uppercase tracking-wider">
+                        {milestone.period}
+                      </span>
+                    </div>
+
+                    {milestone.active ? (
+                      <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-purple-100 text-purple-800">
+                        <span className="w-1.5 h-1.5 rounded-full bg-purple-600 animate-pulse" />
+                        Current
+                      </span>
+                    ) : (
+                      <span className="text-xs font-mono-meta text-zinc-400">Completed</span>
+                    )}
+                  </div>
+
+                  {/* Large Typography Metric */}
+                  <div className="mb-6">
+                    <div className="font-display text-4xl sm:text-5xl font-black text-zinc-950 tracking-tight mb-1 group-hover:text-purple-700 transition-colors">
+                      {milestone.metric}
+                    </div>
+                    <div className="text-xs font-semibold text-zinc-500 uppercase tracking-wide">
+                      {milestone.metricLabel}
+                    </div>
+                  </div>
+
+                  {/* Milestone Title */}
+                  <h3 className="text-lg font-bold text-zinc-900 mb-2">
+                    {milestone.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-sm text-zinc-600 leading-relaxed font-normal mb-6">
+                    {milestone.description}
+                  </p>
+                </div>
+
+                {/* Institution Footer */}
+                <div className="pt-4 border-t border-zinc-200/80 flex items-center justify-between text-xs text-zinc-500">
+                  <span className="font-medium text-zinc-700">{milestone.institution}</span>
+                  <ChevronRight className="w-3.5 h-3.5 text-zinc-400 group-hover:text-purple-600 group-hover:translate-x-1 transition-all" />
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Verification & Context Banner */}
+        <div className="mt-12 p-6 sm:p-7 rounded-2xl bg-[#fafafc] border border-zinc-200/90 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <div className="w-9 h-9 rounded-xl bg-purple-50 border border-purple-100 text-purple-700 flex items-center justify-center shrink-0">
+              <CheckCircle2 className="w-5 h-5" />
+            </div>
+            <div>
+              <p className="text-sm font-semibold text-zinc-900">
+                Department of Computer Science and Engineering
+              </p>
+              <p className="text-xs text-zinc-500">
+                SRM University-AP, Mangalagiri · 9.10 CGPA specifically represents First-Year Academic Performance
+              </p>
+            </div>
+          </div>
+
+          <div className="text-xs font-mono-meta text-purple-800 font-semibold sm:text-right bg-purple-50 px-3 py-1.5 rounded-lg border border-purple-100 self-start sm:self-auto">
+            Class of 2028
+          </div>
+        </div>
+
+      </div>
+    </section>
+  );
+};
