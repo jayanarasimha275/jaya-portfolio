@@ -43,41 +43,40 @@ export const Contact: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10">
         
-        {/* Eyebrow */}
-        <div className="text-center max-w-2xl mx-auto mb-6">
-          <div className="inline-flex items-center gap-2 mb-4">
+        {/* Eyebrow & Header */}
+        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-14">
+          <div className="inline-flex items-center gap-2 mb-3.5">
             <span className="w-2 h-2 rounded-full bg-purple-600 animate-pulse" />
-            <span className="text-xs font-bold tracking-[0.2em] text-purple-700 uppercase">
-              Get in Touch
+            <span className="text-xs font-mono-meta font-semibold text-purple-700 uppercase tracking-widest">
+              06 / Get in Touch
             </span>
           </div>
 
-          {/* Huge Display Heading */}
           <h2
             id="contact-heading"
-            className="font-display text-5xl sm:text-7xl lg:text-8xl font-black tracking-tighter text-zinc-950 uppercase leading-none"
+            className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-zinc-950 mb-4 leading-tight"
           >
-            LET'S CONNECT<span className="text-purple-600">.</span>
+            Let's Connect<span className="text-purple-600">.</span>
           </h2>
 
-          <p className="mt-6 text-base sm:text-lg text-zinc-600 font-normal leading-relaxed">
+          <p className="text-base sm:text-lg text-zinc-600 font-normal leading-relaxed">
             Have an idea, project, internship, or opportunity? I'm always open to discussing new engineering collaborations.
           </p>
         </div>
 
         {/* 3 Main Direct Channels */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mt-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-14 sm:mb-16">
           
           {/* Email Card with Copy button */}
-          <div className="p-8 rounded-3xl bg-white border border-zinc-200/90 shadow-xs hover:border-purple-300 hover:shadow-lg hover:shadow-purple-500/5 transition-all flex flex-col justify-between group">
+          <div className="p-7 sm:p-8 rounded-3xl bg-white border border-zinc-200/90 shadow-2xs hover:border-purple-300 hover:shadow-sm transition-all flex flex-col justify-between group">
             <div>
-              <div className="w-10 h-10 rounded-2xl bg-purple-50 text-purple-700 flex items-center justify-center mb-6">
+              <div className="w-10 h-10 rounded-xl bg-purple-50 text-purple-700 flex items-center justify-center mb-5 shadow-2xs">
                 <Mail className="w-5 h-5" />
               </div>
-              <span className="text-xs font-mono-meta text-purple-700 uppercase tracking-wider font-semibold block mb-1">
+              <span className="text-[11px] font-mono-meta text-purple-700 uppercase tracking-wider font-semibold block mb-1">
                 Direct Email
               </span>
-              <h3 className="text-base font-bold text-zinc-900 break-all mb-4">
+              <h3 className="text-sm sm:text-base font-bold text-zinc-900 break-all mb-4">
                 {PERSONAL_INFO.email}
               </h3>
             </div>
@@ -85,7 +84,7 @@ export const Contact: React.FC = () => {
             <div className="flex items-center gap-2 pt-4 border-t border-zinc-100">
               <a
                 href={`mailto:${PERSONAL_INFO.email}`}
-                className="flex-1 py-2 px-3 rounded-full bg-purple-600 hover:bg-purple-700 text-white text-xs font-semibold text-center transition-colors"
+                className="flex-1 py-2 px-3 rounded-full bg-zinc-950 hover:bg-purple-700 text-white text-xs font-semibold text-center transition-colors shadow-2xs"
               >
                 Send Email
               </a>
@@ -95,7 +94,7 @@ export const Contact: React.FC = () => {
                 title="Copy email to clipboard"
                 aria-label="Copy email"
               >
-                {copied ? <Check className="w-4 h-4 text-green-600" /> : <Copy className="w-4 h-4" />}
+                {copied ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4" />}
               </button>
             </div>
           </div>
@@ -105,16 +104,16 @@ export const Contact: React.FC = () => {
             href={PERSONAL_INFO.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-8 rounded-3xl bg-white border border-zinc-200/90 shadow-xs hover:border-purple-300 hover:shadow-lg hover:shadow-purple-500/5 transition-all flex flex-col justify-between group"
+            className="p-7 sm:p-8 rounded-3xl bg-white border border-zinc-200/90 shadow-2xs hover:border-purple-300 hover:shadow-sm transition-all flex flex-col justify-between group"
           >
             <div>
-              <div className="w-10 h-10 rounded-2xl bg-purple-50 text-purple-700 flex items-center justify-center mb-6">
+              <div className="w-10 h-10 rounded-xl bg-purple-50 text-purple-700 flex items-center justify-center mb-5 shadow-2xs">
                 <Linkedin className="w-5 h-5" />
               </div>
-              <span className="text-xs font-mono-meta text-purple-700 uppercase tracking-wider font-semibold block mb-1">
+              <span className="text-[11px] font-mono-meta text-purple-700 uppercase tracking-wider font-semibold block mb-1">
                 Professional Network
               </span>
-              <h3 className="text-base font-bold text-zinc-900 mb-1">
+              <h3 className="text-sm sm:text-base font-bold text-zinc-900 mb-1">
                 LinkedIn Profile
               </h3>
               <p className="text-xs text-zinc-500">
@@ -133,20 +132,20 @@ export const Contact: React.FC = () => {
             href={PERSONAL_INFO.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-8 rounded-3xl bg-white border border-zinc-200/90 shadow-xs hover:border-purple-300 hover:shadow-lg hover:shadow-purple-500/5 transition-all flex flex-col justify-between group"
+            className="p-7 sm:p-8 rounded-3xl bg-white border border-zinc-200/90 shadow-2xs hover:border-purple-300 hover:shadow-sm transition-all flex flex-col justify-between group"
           >
             <div>
-              <div className="w-10 h-10 rounded-2xl bg-purple-50 text-purple-700 flex items-center justify-center mb-6">
+              <div className="w-10 h-10 rounded-xl bg-purple-50 text-purple-700 flex items-center justify-center mb-5 shadow-2xs">
                 <Github className="w-5 h-5" />
               </div>
-              <span className="text-xs font-mono-meta text-purple-700 uppercase tracking-wider font-semibold block mb-1">
+              <span className="text-[11px] font-mono-meta text-purple-700 uppercase tracking-wider font-semibold block mb-1">
                 Code &amp; Repositories
               </span>
-              <h3 className="text-base font-bold text-zinc-900 mb-1">
-                GitHub Repositories
+              <h3 className="text-sm sm:text-base font-bold text-zinc-900 mb-1">
+                GitHub Profile
               </h3>
               <p className="text-xs text-zinc-500">
-                TrackFlow, Invoice Generator, Portfolio &amp; more
+                TrackFlow, Invoice Generator &amp; builds
               </p>
             </div>
 
@@ -159,8 +158,8 @@ export const Contact: React.FC = () => {
         </div>
 
         {/* Quick Message Box */}
-        <div className="max-w-2xl mx-auto p-8 sm:p-10 rounded-3xl bg-[#fafafc] border border-zinc-200/90">
-          <h4 className="text-base font-bold text-zinc-900 mb-2 text-center">
+        <div className="max-w-xl mx-auto p-7 sm:p-9 rounded-3xl bg-[#fafafc] border border-zinc-200/90 shadow-2xs">
+          <h4 className="text-base font-bold text-zinc-900 mb-1.5 text-center tracking-tight">
             Quick Inquiry
           </h4>
           <p className="text-xs text-zinc-500 mb-6 text-center">

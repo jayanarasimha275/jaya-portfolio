@@ -4,7 +4,7 @@ import { Code2, Globe, Terminal, Palette } from 'lucide-react';
 
 const SKILL_SECTIONS = [
   {
-    title: 'PROGRAMMING',
+    title: 'Programming',
     icon: Code2,
     description: 'Core procedural, object-oriented, and algorithmic languages.',
     skills: [
@@ -15,7 +15,7 @@ const SKILL_SECTIONS = [
     ],
   },
   {
-    title: 'WEB',
+    title: 'Web',
     icon: Globe,
     description: 'Client-side web fundamentals for building responsive web apps.',
     skills: [
@@ -24,7 +24,7 @@ const SKILL_SECTIONS = [
     ],
   },
   {
-    title: 'TOOLS',
+    title: 'Tools',
     icon: Terminal,
     description: 'Version control and collaboration platforms for codebases.',
     skills: [
@@ -33,7 +33,7 @@ const SKILL_SECTIONS = [
     ],
   },
   {
-    title: 'DESIGN',
+    title: 'Design',
     icon: Palette,
     description: 'User-centered interface principles and visual layout ergonomics.',
     skills: [
@@ -58,19 +58,19 @@ export const Skills: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         
         {/* Section Header */}
-        <div className="max-w-3xl mb-16 sm:mb-20">
-          <div className="inline-flex items-center gap-2 mb-3">
+        <div className="max-w-3xl mb-14 sm:mb-16">
+          <div className="inline-flex items-center gap-2 mb-3.5">
             <span className="w-2 h-2 rounded-full bg-purple-600" />
-            <span className="text-xs font-bold tracking-[0.2em] text-purple-700 uppercase">
-              Toolkit &amp; Capabilities
+            <span className="text-xs font-mono-meta font-semibold text-purple-700 uppercase tracking-widest">
+              04 / Toolkit &amp; Capabilities
             </span>
           </div>
 
           <h2
             id="skills-heading"
-            className="font-display text-4xl sm:text-6xl font-extrabold tracking-tight text-zinc-950 mb-5 leading-none"
+            className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-zinc-950 mb-4 leading-tight"
           >
-            SKILLS<span className="text-purple-600">.</span>
+            Skills<span className="text-purple-600">.</span>
           </h2>
 
           <p className="text-base sm:text-lg text-zinc-600 font-normal leading-relaxed">
@@ -79,26 +79,26 @@ export const Skills: React.FC = () => {
         </div>
 
         {/* 4 Clean Editorial Columns */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {SKILL_SECTIONS.map((section, index) => {
             const IconComponent = section.icon;
             return (
               <motion.div
                 key={section.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.08 }}
-                className="bg-[#fafafc] rounded-3xl p-7 sm:p-8 border border-zinc-200/90 shadow-xs hover:border-purple-300 hover:shadow-md hover:shadow-purple-500/5 transition-all flex flex-col justify-between group"
+                transition={{ duration: 0.4, delay: index * 0.07 }}
+                className="bg-[#fafafc] rounded-3xl p-6 sm:p-7 border border-zinc-200/90 shadow-2xs hover:border-purple-200 hover:shadow-xs transition-all flex flex-col justify-between group"
               >
                 <div>
                   {/* Category Header */}
-                  <div className="pb-5 mb-6 border-b border-zinc-200/80 flex items-center justify-between">
+                  <div className="pb-4 mb-5 border-b border-zinc-200/80 flex items-center justify-between">
                     <div className="flex items-center gap-2.5">
                       <div className="w-7 h-7 rounded-lg bg-purple-50 text-purple-700 flex items-center justify-center">
                         <IconComponent className="w-4 h-4" />
                       </div>
-                      <h3 className="font-display text-sm font-bold text-zinc-900 tracking-wider">
+                      <h3 className="font-display text-sm font-bold text-zinc-950 tracking-normal">
                         {section.title}
                       </h3>
                     </div>
@@ -107,24 +107,24 @@ export const Skills: React.FC = () => {
                     </span>
                   </div>
 
-                  <p className="text-xs text-zinc-500 mb-6 leading-relaxed">
+                  <p className="text-xs text-zinc-500 mb-5 leading-relaxed">
                     {section.description}
                   </p>
 
                   {/* Skills inside category */}
-                  <div className="space-y-3">
+                  <div className="space-y-2.5">
                     {section.skills.map((skill) => (
                       <div
                         key={skill.name}
-                        className="p-3.5 rounded-2xl bg-white border border-zinc-200/80 group-hover:border-purple-100 transition-colors"
+                        className="p-3 rounded-xl bg-white border border-zinc-200/70 hover:border-purple-200 transition-colors"
                       >
                         <div className="flex items-center justify-between mb-1">
-                          <span className="text-sm font-bold text-zinc-900">
+                          <span className="text-xs font-bold text-zinc-900">
                             {skill.name}
                           </span>
-                          <span className="w-1.5 h-1.5 rounded-full bg-purple-600" />
+                          <span className="w-1.5 h-1.5 rounded-full bg-purple-600/70" />
                         </div>
-                        <p className="text-xs text-zinc-500 leading-snug font-light">
+                        <p className="text-[11px] text-zinc-500 leading-normal font-normal">
                           {skill.detail}
                         </p>
                       </div>
@@ -132,7 +132,7 @@ export const Skills: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="pt-6 mt-6 border-t border-zinc-200/80 text-[11px] font-mono-meta text-purple-700 font-semibold">
+                <div className="pt-5 mt-5 border-t border-zinc-200/80 text-[11px] font-mono-meta text-purple-700 font-semibold">
                   {section.skills.length} {section.skills.length === 1 ? 'Technology' : 'Technologies'}
                 </div>
               </motion.div>

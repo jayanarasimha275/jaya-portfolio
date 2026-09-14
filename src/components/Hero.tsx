@@ -32,9 +32,9 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProjects }) => {
         aria-hidden="true" 
       />
 
-      {/* Floating vertical social buttons on the left (Desktop) */}
+      {/* Floating vertical social buttons on the left (Wide Desktop) */}
       <aside 
-        className="hidden md:flex fixed left-6 lg:left-8 top-1/2 -translate-y-1/2 z-40 flex-col items-center gap-3 p-2 rounded-full bg-white/90 backdrop-blur-md border border-zinc-200 shadow-md shadow-zinc-900/5"
+        className="hidden xl:flex fixed left-6 lg:left-8 top-1/2 -translate-y-1/2 z-40 flex-col items-center gap-3 p-2 rounded-full bg-white/90 backdrop-blur-md border border-zinc-200 shadow-md shadow-zinc-900/5"
         aria-label="Social media channels"
       >
         <a
@@ -77,102 +77,113 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProjects }) => {
         <div className="w-[1px] h-6 bg-zinc-200 mt-1" />
       </aside>
 
-      {/* Main Content Area: Editorial Poster Composition */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex flex-col items-center justify-center relative z-10 text-center">
+      {/* Main Content Area: Balanced Editorial Composition */}
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex flex-col items-center justify-center relative z-10 text-center py-6 sm:py-10">
         
-        {/* Subtle Top Eyebrow Tag */}
+        {/* Subtle Top Status Badge */}
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
-          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-zinc-200 shadow-xs mb-4 sm:mb-6"
+          className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white border border-zinc-200/90 shadow-2xs mb-6 sm:mb-8"
         >
-          <span className="w-2 h-2 rounded-full bg-purple-600 animate-pulse" />
-          <span className="text-xs font-semibold tracking-wider text-zinc-700 uppercase">
-            SRM University-AP · 2nd Year B.Tech CSE
+          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+          <span className="text-xs font-semibold text-zinc-800 tracking-tight">
+            {PERSONAL_INFO.status}
+          </span>
+          <span className="text-zinc-300">·</span>
+          <span className="text-xs font-mono-meta text-purple-700 font-medium">
+            SRM University-AP
           </span>
         </motion.div>
 
-        {/* Central Editorial Poster: Huge Typography Interacting with Center Portrait */}
-        <div className="relative w-full max-w-5xl flex flex-col items-center justify-center my-4 sm:my-8">
-          
-          {/* Top Huge Heading Line */}
-          <motion.h1
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="font-display font-extrabold text-zinc-950 uppercase tracking-tighter text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl leading-[0.9] select-none text-center"
-          >
-            I'M PALLA JAYA
-          </motion.h1>
-
-          {/* Centered Editorial Portrait Cutout (Border-free, subtle shadow, transparent gradient bottom) */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-            className="relative -my-5 sm:-my-9 md:-my-13 lg:-my-16 z-20 group"
-          >
-            <div 
-              className="relative w-60 sm:w-72 md:w-80 lg:w-[22rem] aspect-[4/4.8] overflow-hidden filter drop-shadow-[0_25px_35px_rgba(0,0,0,0.12)] transition-transform duration-500 group-hover:scale-[1.01] [mask-image:linear-gradient(to_bottom,black_78%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_78%,transparent_100%)]"
-            >
+        {/* Refined Portrait: Elegant circular frame with subtle shadow & ring */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.92 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          className="relative mb-6 sm:mb-8 group"
+        >
+          <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full p-1 bg-gradient-to-b from-zinc-200 to-purple-200/60 shadow-lg shadow-purple-500/5">
+            <div className="w-full h-full rounded-full overflow-hidden bg-white border-2 border-white relative">
               <img
                 src="/me.png"
-                alt="Palla Jaya Narasimha"
-                className="w-full h-full object-cover object-top filter contrast-[1.02]"
+                alt={PERSONAL_INFO.name}
+                className="w-full h-full object-cover object-top filter contrast-[1.02] transition-transform duration-500 group-hover:scale-105"
                 onError={(e) => {
                   (e.target as HTMLImageElement).src = '/profile1.jpg';
                 }}
               />
             </div>
-          </motion.div>
-
-          {/* Bottom Huge Heading Line with Comfortable Breathing Room */}
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="font-display font-extrabold text-zinc-950 uppercase tracking-tighter text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl leading-[0.9] select-none text-center z-10 pt-1 sm:pt-2 pb-2"
-          >
-            <span className="text-zinc-950">NARASIMHA</span>
-            <span className="text-purple-600">.</span>
-          </motion.div>
-        </div>
-
-        {/* Subtext under the hero poster with generous vertical spacing */}
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.35, ease: 'easeOut' }}
-          className="max-w-xl mx-auto mt-8 sm:mt-12 space-y-3"
-        >
-          <p className="text-base sm:text-lg font-semibold text-zinc-800 tracking-tight">
-            {PERSONAL_INFO.role}
-          </p>
-          <p className="text-sm sm:text-base text-zinc-600 leading-relaxed font-normal">
-            Building practical software, learning through real projects, and exploring development and UI/UX.
-          </p>
-
-          {/* Action buttons */}
-          <div className="flex flex-wrap items-center justify-center gap-3.5 pt-4">
-            <button
-              id="hero-explore-work-btn"
-              onClick={onExploreProjects}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-purple-600 text-white font-medium text-sm hover:bg-purple-700 transition-all shadow-md shadow-purple-600/20 active:scale-95 cursor-pointer"
-            >
-              <span>Selected Work</span>
-              <ArrowDown className="w-4 h-4" />
-            </button>
-
-            <a
-              id="hero-get-in-touch-btn"
-              href="#contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white border border-zinc-300 text-zinc-800 hover:border-purple-400 hover:text-purple-700 font-medium text-sm transition-all shadow-xs active:scale-95"
-            >
-              <span>Let's Connect</span>
-              <ArrowUpRight className="w-4 h-4 text-zinc-500 group-hover:text-purple-600" />
-            </a>
           </div>
+          {/* Subtle online indicator */}
+          <span className="absolute bottom-1 right-1 w-4 h-4 rounded-full bg-white flex items-center justify-center shadow-xs">
+            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500" />
+          </span>
+        </motion.div>
+
+        {/* Balanced, Strong Editorial Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+          className="space-y-3 max-w-3xl"
+        >
+          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-zinc-950 tracking-tight leading-[1.08]">
+            {PERSONAL_INFO.name}
+          </h1>
+
+          <p className="text-base sm:text-xl text-zinc-700 font-medium tracking-tight max-w-2xl mx-auto leading-snug pt-1">
+            {PERSONAL_INFO.role} · Exploring Software Engineering &amp; UI/UX
+          </p>
+
+          <p className="text-sm sm:text-base text-zinc-500 max-w-xl mx-auto leading-relaxed font-normal pt-1">
+            {PERSONAL_INFO.tagline}
+          </p>
+        </motion.div>
+
+        {/* Action Buttons */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.25, ease: 'easeOut' }}
+          className="flex flex-wrap items-center justify-center gap-3 pt-7 sm:pt-8"
+        >
+          <button
+            id="hero-explore-work-btn"
+            onClick={onExploreProjects}
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-zinc-950 hover:bg-purple-700 text-white font-medium text-sm transition-all shadow-xs active:scale-95 cursor-pointer"
+          >
+            <span>Selected Work</span>
+            <ArrowDown className="w-4 h-4" />
+          </button>
+
+          <a
+            id="hero-get-in-touch-btn"
+            href="#contact"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white border border-zinc-300 text-zinc-800 hover:border-purple-300 hover:text-purple-700 font-medium text-sm transition-all shadow-2xs active:scale-95"
+          >
+            <span>Let's Connect</span>
+            <ArrowUpRight className="w-4 h-4 text-zinc-400 group-hover:text-purple-600" />
+          </a>
+        </motion.div>
+
+        {/* Quick Meta Tags */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.35 }}
+          className="flex flex-wrap items-center justify-center gap-2.5 pt-8 sm:pt-10 text-xs text-zinc-500"
+        >
+          <span className="px-3 py-1 rounded-full bg-white border border-zinc-200/80 font-mono-meta">
+            SRM University-AP · 2nd Year
+          </span>
+          <span className="px-3 py-1 rounded-full bg-white border border-zinc-200/80 font-mono-meta">
+            C, C++, Python, Java
+          </span>
+          <span className="px-3 py-1 rounded-full bg-white border border-zinc-200/80 font-mono-meta">
+            Web &amp; UI/UX Craft
+          </span>
         </motion.div>
 
         {/* Mobile social links banner */}
@@ -181,7 +192,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProjects }) => {
             href={PERSONAL_INFO.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-purple-600 flex items-center gap-1"
+            className="hover:text-purple-600 flex items-center gap-1.5 transition-colors"
           >
             <Github className="w-3.5 h-3.5" />
             <span>GitHub</span>
@@ -191,7 +202,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProjects }) => {
             href={PERSONAL_INFO.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-purple-600 flex items-center gap-1"
+            className="hover:text-purple-600 flex items-center gap-1.5 transition-colors"
           >
             <Linkedin className="w-3.5 h-3.5" />
             <span>LinkedIn</span>
@@ -199,7 +210,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProjects }) => {
           <span className="text-zinc-300">·</span>
           <a
             href={`mailto:${PERSONAL_INFO.email}`}
-            className="hover:text-purple-600 flex items-center gap-1"
+            className="hover:text-purple-600 flex items-center gap-1.5 transition-colors"
           >
             <Mail className="w-3.5 h-3.5" />
             <span>Email</span>

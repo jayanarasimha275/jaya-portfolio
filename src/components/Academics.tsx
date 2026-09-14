@@ -21,19 +21,19 @@ export const Academics: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         
         {/* Section Header with Large Typography */}
-        <div className="max-w-3xl mb-16 sm:mb-20">
-          <div className="inline-flex items-center gap-2 mb-3">
+        <div className="max-w-3xl mb-14 sm:mb-16">
+          <div className="inline-flex items-center gap-2 mb-3.5">
             <span className="w-2 h-2 rounded-full bg-purple-600" />
-            <span className="text-xs font-bold tracking-[0.2em] text-purple-700 uppercase">
-              Academic Timeline
+            <span className="text-xs font-mono-meta font-semibold text-purple-700 uppercase tracking-widest">
+              02 / Academic Journey
             </span>
           </div>
 
           <h2
             id="journey-heading"
-            className="font-display text-4xl sm:text-6xl font-extrabold tracking-tight text-zinc-950 mb-5 leading-none"
+            className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-zinc-950 mb-4 leading-tight"
           >
-            MY JOURNEY<span className="text-purple-600">.</span>
+            My Journey<span className="text-purple-600">.</span>
           </h2>
 
           <p className="text-base sm:text-lg text-zinc-600 font-normal leading-relaxed">
@@ -44,23 +44,23 @@ export const Academics: React.FC = () => {
         {/* Visual Timeline Layout */}
         <div className="relative">
           {/* Subtle horizontal timeline track for larger screens */}
-          <div className="hidden lg:block absolute top-28 left-8 right-8 h-[2px] bg-purple-100 -z-0" />
+          <div className="hidden lg:block absolute top-24 left-8 right-8 h-[1px] bg-purple-100/90 -z-0" />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 relative z-10">
             {JOURNEY_MILESTONES.map((milestone, idx) => (
               <motion.div
                 key={milestone.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.12 }}
-                className="bg-[#fafafc] rounded-3xl p-8 border border-zinc-200/90 shadow-xs hover:border-purple-200 transition-all flex flex-col justify-between group"
+                transition={{ duration: 0.45, delay: idx * 0.1 }}
+                className="bg-[#fafafc] rounded-3xl p-7 sm:p-8 border border-zinc-200/90 shadow-2xs hover:border-purple-200 hover:shadow-sm transition-all flex flex-col justify-between group"
               >
                 <div>
                   {/* Step indicator & Period */}
-                  <div className="flex items-center justify-between pb-5 mb-6 border-b border-zinc-200/80">
+                  <div className="flex items-center justify-between pb-4 mb-5 border-b border-zinc-200/80">
                     <div className="flex items-center gap-2">
-                      <span className="w-6 h-6 rounded-full bg-purple-600 text-white text-xs font-bold flex items-center justify-center">
+                      <span className="w-6 h-6 rounded-full bg-purple-600 text-white text-xs font-semibold flex items-center justify-center font-mono-meta">
                         0{idx + 1}
                       </span>
                       <span className="text-xs font-mono-meta font-semibold text-purple-700 uppercase tracking-wider">
@@ -69,7 +69,7 @@ export const Academics: React.FC = () => {
                     </div>
 
                     {milestone.active ? (
-                      <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-purple-100 text-purple-800">
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-purple-100 text-purple-800">
                         <span className="w-1.5 h-1.5 rounded-full bg-purple-600 animate-pulse" />
                         Current
                       </span>
@@ -78,18 +78,18 @@ export const Academics: React.FC = () => {
                     )}
                   </div>
 
-                  {/* Large Typography Metric */}
-                  <div className="mb-6">
-                    <div className="font-display text-4xl sm:text-5xl font-black text-zinc-950 tracking-tight mb-1 group-hover:text-purple-700 transition-colors">
+                  {/* Metric Display */}
+                  <div className="mb-5">
+                    <div className="font-display text-3xl sm:text-4xl font-extrabold text-zinc-950 tracking-tight mb-1 group-hover:text-purple-700 transition-colors">
                       {milestone.metric}
                     </div>
-                    <div className="text-xs font-semibold text-zinc-500 uppercase tracking-wide">
+                    <div className="text-[11px] font-semibold text-zinc-500 uppercase tracking-wider font-mono-meta">
                       {milestone.metricLabel}
                     </div>
                   </div>
 
                   {/* Milestone Title */}
-                  <h3 className="text-lg font-bold text-zinc-900 mb-2">
+                  <h3 className="text-base sm:text-lg font-bold text-zinc-900 mb-2 tracking-tight">
                     {milestone.title}
                   </h3>
 
@@ -102,7 +102,7 @@ export const Academics: React.FC = () => {
                 {/* Institution Footer */}
                 <div className="pt-4 border-t border-zinc-200/80 flex items-center justify-between text-xs text-zinc-500">
                   <span className="font-medium text-zinc-700">{milestone.institution}</span>
-                  <ChevronRight className="w-3.5 h-3.5 text-zinc-400 group-hover:text-purple-600 group-hover:translate-x-1 transition-all" />
+                  <ChevronRight className="w-3.5 h-3.5 text-zinc-400 group-hover:text-purple-600 group-hover:translate-x-0.5 transition-all" />
                 </div>
               </motion.div>
             ))}
