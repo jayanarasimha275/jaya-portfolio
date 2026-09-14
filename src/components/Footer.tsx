@@ -8,8 +8,8 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer id="site-footer" className="bg-[#fafafc] border-t border-zinc-200 py-12 px-6 sm:px-8">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+    <footer id="site-footer" className="bg-[#fafafc] border-t border-zinc-200/80 py-12 px-6 sm:px-8">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         
         {/* Left: Identity and affiliation */}
         <div className="text-center md:text-left space-y-1">
@@ -57,7 +57,7 @@ export const Footer: React.FC = () => {
           <span>© 2026 {PERSONAL_INFO.name}</span>
           <button
             onClick={scrollToTop}
-            className="p-2 rounded-full bg-white border border-zinc-200 hover:border-purple-300 text-zinc-600 hover:text-purple-600 transition-colors cursor-pointer shadow-2xs"
+            className="p-2.5 rounded-full bg-white border border-zinc-200/90 hover:border-purple-300 text-zinc-600 hover:text-purple-600 hover:-translate-y-0.5 transition-all cursor-pointer shadow-2xs"
             aria-label="Back to top"
             title="Scroll to top"
           >

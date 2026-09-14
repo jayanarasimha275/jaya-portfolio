@@ -37,7 +37,7 @@ export const Interests: React.FC = () => {
   return (
     <section
       id="building"
-      className="py-24 sm:py-32 bg-[#fcfcfd] border-b border-zinc-200/80 relative"
+      className="py-24 sm:py-28 lg:py-32 bg-[#fcfcfd] border-b border-zinc-200/80 relative"
       aria-labelledby="building-heading"
     >
       <span id="exploring" className="sr-only" aria-hidden="true" />
@@ -45,11 +45,11 @@ export const Interests: React.FC = () => {
 
       {/* Subtle decorative purple tile */}
       <div 
-        className="absolute bottom-16 right-[12%] w-16 h-16 bg-purple-500/5 border border-purple-300/20 rounded-sm pointer-events-none hidden lg:block" 
+        className="absolute bottom-16 right-[12%] w-16 h-16 bg-purple-500/10 border border-purple-400/20 rounded-md pointer-events-none hidden lg:block" 
         aria-hidden="true" 
       />
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-8">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-14 sm:mb-16">
           <div className="inline-flex items-center gap-2 mb-3.5">
@@ -61,7 +61,7 @@ export const Interests: React.FC = () => {
 
           <h2
             id="building-heading"
-            className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-zinc-950 mb-4 leading-tight"
+            className="font-display text-3xl sm:text-4xl lg:text-[42px] font-extrabold tracking-tight text-zinc-950 mb-4 leading-tight"
           >
             What I'm Building<span className="text-purple-600">.</span>
           </h2>
@@ -82,10 +82,10 @@ export const Interests: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: index * 0.08 }}
-                className="bg-white rounded-3xl p-8 sm:p-9 border border-zinc-200/90 shadow-2xs hover:border-purple-300 hover:shadow-md hover:shadow-purple-500/5 transition-all flex flex-col justify-between group relative overflow-hidden"
+                className="bg-white rounded-2xl sm:rounded-3xl p-8 sm:p-9 border border-zinc-200/90 shadow-[0_2px_12px_rgba(20,20,40,0.03)] hover:border-purple-300 hover:shadow-[0_20px_45px_-8px_rgba(124,58,237,0.09)] hover:-translate-y-1 transition-all flex flex-col justify-between group relative overflow-hidden"
               >
                 {/* Subtle soft purple highlight in the background */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-purple-50/50 rounded-full blur-2xl pointer-events-none group-hover:bg-purple-100/50 transition-colors" />
+                <div className="absolute top-0 right-0 w-36 h-36 bg-purple-50/50 rounded-full blur-2xl pointer-events-none group-hover:bg-purple-100/50 transition-colors" />
 
                 <div>
                   {/* Card Top: Number and Icon */}

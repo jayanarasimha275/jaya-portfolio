@@ -37,9 +37,9 @@
   }
 }
 
-/* Display typography for balanced editorial headings */
+/* Display typography for balanced, modern developer headings */
 .font-display {
-  font-family: 'Syne', 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   letter-spacing: -0.03em;
 }
 
@@ -49,7 +49,7 @@
   letter-spacing: -0.02em;
 }
 
-/* Ultra-subtle architectural grid pattern */
+/* Architectural grid patterns */
 .bg-grid-pattern {
   background-image: 
     linear-gradient(to right, rgba(15, 23, 42, 0.035) 1px, transparent 1px),
@@ -68,13 +68,14 @@
 .editorial-card {
   background-color: #ffffff;
   border: 1px solid rgba(228, 228, 231, 0.9);
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.02);
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.025);
   transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
 }
 
 .editorial-card:hover {
   border-color: #c4b5fd;
-  box-shadow: 0 12px 32px -8px rgba(124, 58, 237, 0.08);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px -8px rgba(124, 58, 237, 0.09);
 }
 
 /* Accessibility: Respect user's motion preference */

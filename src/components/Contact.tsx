@@ -28,23 +28,23 @@ export const Contact: React.FC = () => {
   return (
     <section
       id="contact"
-      className="py-28 sm:py-36 bg-white border-b border-zinc-200/80 relative overflow-hidden bg-grid-pattern"
+      className="py-24 sm:py-28 lg:py-32 bg-white border-b border-zinc-200/80 relative overflow-hidden bg-grid-pattern"
       aria-labelledby="contact-heading"
     >
       {/* Decorative soft purple block */}
       <div 
-        className="absolute top-20 right-[15%] w-16 h-16 bg-purple-500/10 border border-purple-400/20 rounded-sm pointer-events-none hidden sm:block" 
+        className="absolute top-20 right-[15%] w-16 h-16 bg-purple-500/10 border border-purple-400/20 rounded-md pointer-events-none hidden sm:block" 
         aria-hidden="true" 
       />
       <div 
-        className="absolute bottom-20 left-[10%] w-16 h-16 bg-purple-600/10 border border-purple-400/20 rounded-sm pointer-events-none hidden md:block" 
+        className="absolute bottom-20 left-[10%] w-16 h-16 bg-purple-600/10 border border-purple-400/20 rounded-md pointer-events-none hidden md:block" 
         aria-hidden="true" 
       />
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 relative z-10">
         
         {/* Eyebrow & Header */}
-        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-14">
+        <div className="text-center max-w-2xl mx-auto mb-14 sm:mb-16">
           <div className="inline-flex items-center gap-2 mb-3.5">
             <span className="w-2 h-2 rounded-full bg-purple-600 animate-pulse" />
             <span className="text-xs font-mono-meta font-semibold text-purple-700 uppercase tracking-widest">
@@ -54,7 +54,7 @@ export const Contact: React.FC = () => {
 
           <h2
             id="contact-heading"
-            className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-zinc-950 mb-4 leading-tight"
+            className="font-display text-3xl sm:text-4xl lg:text-[42px] font-extrabold tracking-tight text-zinc-950 mb-4 leading-tight"
           >
             Let's Connect<span className="text-purple-600">.</span>
           </h2>
@@ -68,7 +68,7 @@ export const Contact: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-14 sm:mb-16">
           
           {/* Email Card with Copy button */}
-          <div className="p-7 sm:p-8 rounded-3xl bg-white border border-zinc-200/90 shadow-2xs hover:border-purple-300 hover:shadow-sm transition-all flex flex-col justify-between group">
+          <div className="p-7 sm:p-8 rounded-2xl sm:rounded-3xl bg-white border border-zinc-200/90 shadow-[0_2px_10px_rgba(20,20,40,0.025)] hover:border-purple-300 hover:shadow-[0_16px_36px_-8px_rgba(124,58,237,0.08)] hover:-translate-y-1 transition-all flex flex-col justify-between group">
             <div>
               <div className="w-10 h-10 rounded-xl bg-purple-50 text-purple-700 flex items-center justify-center mb-5 shadow-2xs">
                 <Mail className="w-5 h-5" />
@@ -84,7 +84,7 @@ export const Contact: React.FC = () => {
             <div className="flex items-center gap-2 pt-4 border-t border-zinc-100">
               <a
                 href={`mailto:${PERSONAL_INFO.email}`}
-                className="flex-1 py-2 px-3 rounded-full bg-zinc-950 hover:bg-purple-700 text-white text-xs font-semibold text-center transition-colors shadow-2xs"
+                className="flex-1 py-2.5 px-4 rounded-full bg-zinc-950 hover:bg-purple-700 text-white text-xs font-semibold text-center transition-all hover:-translate-y-0.5 shadow-2xs hover:shadow-xs"
               >
                 Send Email
               </a>
@@ -104,7 +104,7 @@ export const Contact: React.FC = () => {
             href={PERSONAL_INFO.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-7 sm:p-8 rounded-3xl bg-white border border-zinc-200/90 shadow-2xs hover:border-purple-300 hover:shadow-sm transition-all flex flex-col justify-between group"
+            className="p-7 sm:p-8 rounded-2xl sm:rounded-3xl bg-white border border-zinc-200/90 shadow-[0_2px_10px_rgba(20,20,40,0.025)] hover:border-purple-300 hover:shadow-[0_16px_36px_-8px_rgba(124,58,237,0.08)] hover:-translate-y-1 transition-all flex flex-col justify-between group"
           >
             <div>
               <div className="w-10 h-10 rounded-xl bg-purple-50 text-purple-700 flex items-center justify-center mb-5 shadow-2xs">
@@ -132,7 +132,7 @@ export const Contact: React.FC = () => {
             href={PERSONAL_INFO.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-7 sm:p-8 rounded-3xl bg-white border border-zinc-200/90 shadow-2xs hover:border-purple-300 hover:shadow-sm transition-all flex flex-col justify-between group"
+            className="p-7 sm:p-8 rounded-2xl sm:rounded-3xl bg-white border border-zinc-200/90 shadow-[0_2px_10px_rgba(20,20,40,0.025)] hover:border-purple-300 hover:shadow-[0_16px_36px_-8px_rgba(124,58,237,0.08)] hover:-translate-y-1 transition-all flex flex-col justify-between group"
           >
             <div>
               <div className="w-10 h-10 rounded-xl bg-purple-50 text-purple-700 flex items-center justify-center mb-5 shadow-2xs">
@@ -158,7 +158,7 @@ export const Contact: React.FC = () => {
         </div>
 
         {/* Quick Message Box */}
-        <div className="max-w-xl mx-auto p-7 sm:p-9 rounded-3xl bg-[#fafafc] border border-zinc-200/90 shadow-2xs">
+        <div className="max-w-xl mx-auto p-7 sm:p-9 rounded-2xl sm:rounded-3xl bg-[#fafafc] border border-zinc-200/90 shadow-[0_2px_10px_rgba(20,20,40,0.02)]">
           <h4 className="text-base font-bold text-zinc-900 mb-1.5 text-center tracking-tight">
             Quick Inquiry
           </h4>
@@ -177,7 +177,7 @@ export const Contact: React.FC = () => {
                 value={subject}
                 onChange={(e) => setSubject(e.target.value)}
                 placeholder="e.g. Collaboration / Opportunity / Project feedback"
-                className="w-full px-4 py-2.5 rounded-xl bg-white border border-zinc-200 text-sm text-zinc-900 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full px-4 py-2.5 rounded-xl bg-white border border-zinc-200 text-sm text-zinc-900 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"
               />
             </div>
 
@@ -192,14 +192,14 @@ export const Contact: React.FC = () => {
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="Write your note here..."
                 required
-                className="w-full px-4 py-2.5 rounded-xl bg-white border border-zinc-200 text-sm text-zinc-900 focus:outline-none focus:ring-2 focus:ring-purple-500 resize-none"
+                className="w-full px-4 py-2.5 rounded-xl bg-white border border-zinc-200 text-sm text-zinc-900 focus:outline-none focus:ring-2 focus:ring-purple-500 resize-none transition-all"
               />
             </div>
 
             <button
               id="contact-submit-btn"
               type="submit"
-              className="w-full py-3 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-semibold text-xs tracking-wide uppercase transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-sm active:scale-98"
+              className="w-full py-3.5 rounded-full bg-purple-600 hover:bg-purple-700 hover:-translate-y-0.5 text-white font-semibold text-xs tracking-wider uppercase transition-all flex items-center justify-center gap-2 cursor-pointer shadow-xs active:scale-98"
             >
               <Send className="w-3.5 h-3.5" />
               <span>Send Message</span>

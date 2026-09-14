@@ -46,11 +46,11 @@ export const Navbar: React.FC = () => {
       id="site-header"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/85 backdrop-blur-md border-b border-zinc-200/70 shadow-[0_1px_10px_rgba(0,0,0,0.03)] py-3'
+          ? 'bg-white/80 backdrop-blur-md border-b border-zinc-200/70 shadow-[0_4px_20px_rgba(0,0,0,0.03)] py-3'
           : 'bg-transparent py-5 sm:py-6'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 flex items-center justify-between">
         {/* Brand Identity / Logo */}
         <a
           href="#"
@@ -59,7 +59,7 @@ export const Navbar: React.FC = () => {
         >
           <span className="w-2 h-2 rounded-full bg-purple-600 transition-transform duration-300 group-hover:scale-125" />
           <span className="font-display text-sm font-bold tracking-tight text-zinc-950 group-hover:text-purple-600 transition-colors">
-            PJN.
+            PJN<span className="text-purple-600">.</span>
           </span>
           <span className="hidden sm:inline-block text-[13px] text-zinc-500 font-medium tracking-tight ml-0.5 border-l border-zinc-200 pl-2.5">
             Palla Jaya Narasimha
@@ -118,7 +118,7 @@ export const Navbar: React.FC = () => {
           <a
             id="nav-connect-btn"
             href="#contact"
-            className="ml-1.5 inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-zinc-950 text-white text-xs font-semibold hover:bg-purple-700 transition-all shadow-xs hover:shadow-sm active:scale-95"
+            className="ml-1.5 inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-zinc-950 text-white text-xs font-semibold hover:bg-purple-700 hover:-translate-y-0.5 transition-all shadow-xs hover:shadow-sm active:scale-95"
           >
             <span>Let's Connect</span>
           </a>
@@ -128,7 +128,7 @@ export const Navbar: React.FC = () => {
         <div className="flex lg:hidden items-center gap-2.5">
           <a
             href="#contact"
-            className="px-3 py-1.5 rounded-full bg-zinc-950 text-white text-xs font-semibold hover:bg-purple-700 transition-colors shadow-2xs"
+            className="px-3.5 py-1.5 rounded-full bg-zinc-950 text-white text-xs font-semibold hover:bg-purple-700 transition-colors shadow-2xs"
           >
             Connect
           </a>

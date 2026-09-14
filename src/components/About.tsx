@@ -7,17 +7,17 @@ export const About: React.FC = () => {
   return (
     <section
       id="about"
-      className="py-24 sm:py-32 bg-[#fcfcfd] border-b border-zinc-200/80 relative"
+      className="py-24 sm:py-28 lg:py-32 bg-[#fcfcfd] border-b border-zinc-200/80 relative"
       aria-labelledby="about-heading"
     >
       {/* Decorative subtle grid tile */}
       <div 
-        className="absolute top-12 right-[8%] w-16 h-16 bg-purple-500/5 border border-purple-300/20 rounded-sm pointer-events-none hidden lg:block" 
+        className="absolute top-12 right-[8%] w-16 h-16 bg-purple-500/10 border border-purple-400/20 rounded-md pointer-events-none hidden lg:block" 
         aria-hidden="true" 
       />
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-start">
           
           {/* Left Column: Asymmetrical Editorial Heading & Quick Meta */}
           <div className="lg:col-span-5 flex flex-col items-start">
@@ -30,9 +30,9 @@ export const About: React.FC = () => {
 
             <h2
               id="about-heading"
-              className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-zinc-950 mb-5 leading-[1.15]"
+              className="font-display text-3xl sm:text-4xl lg:text-[42px] font-extrabold tracking-tight text-zinc-950 mb-5 leading-[1.16]"
             >
-              Crafting software through hands-on practice.
+              Crafting software through hands-on practice<span className="text-purple-600">.</span>
             </h2>
 
             <p className="text-base text-zinc-600 leading-relaxed mb-8">
@@ -40,7 +40,7 @@ export const About: React.FC = () => {
             </p>
 
             {/* Academic Status Card */}
-            <div className="w-full p-6 rounded-2xl bg-white border border-zinc-200/90 shadow-2xs hover:border-purple-200 transition-all space-y-4">
+            <div className="w-full p-6 sm:p-7 rounded-2xl sm:rounded-3xl bg-white border border-zinc-200/90 shadow-[0_2px_12px_rgba(20,20,40,0.03)] hover:border-purple-300 hover:shadow-[0_16px_36px_-8px_rgba(124,58,237,0.08)] hover:-translate-y-0.5 transition-all space-y-4">
               <div className="flex items-start gap-3.5">
                 <div className="p-2.5 rounded-xl bg-purple-50 border border-purple-100/80 text-purple-700">
                   <GraduationCap className="w-5 h-5" />
@@ -59,22 +59,22 @@ export const About: React.FC = () => {
                   <MapPin className="w-3.5 h-3.5 text-zinc-400" />
                   Mangalagiri, Andhra Pradesh
                 </span>
-                <span className="font-semibold text-purple-700 font-mono-meta bg-purple-50 px-2 py-0.5 rounded-md">2nd Year</span>
+                <span className="font-semibold text-purple-700 font-mono-meta bg-purple-50 px-2.5 py-0.5 rounded-md border border-purple-100/60">2nd Year</span>
               </div>
             </div>
           </div>
 
           {/* Right Column: Editorial Narrative & Large Typography Callout */}
-          <div className="lg:col-span-7 space-y-8">
+          <div className="lg:col-span-7 space-y-7 sm:space-y-8">
             {/* Primary Large Phrase */}
-            <div className="p-8 sm:p-10 rounded-3xl bg-white border border-zinc-200/90 shadow-2xs relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-purple-50/70 rounded-full blur-3xl pointer-events-none" />
+            <div className="p-8 sm:p-10 rounded-2xl sm:rounded-3xl bg-white border border-zinc-200/90 shadow-[0_2px_12px_rgba(20,20,40,0.03)] relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-36 h-36 bg-purple-50/70 rounded-full blur-3xl pointer-events-none" />
               
               <p className="text-lg sm:text-xl font-medium text-zinc-900 leading-snug tracking-tight mb-6">
                 "I am a 2nd-year B.Tech Computer Science and Engineering student at SRM University-AP. I enjoy building practical software, learning through hands-on projects, solving programming problems, and exploring both development and UI/UX."
               </p>
 
-              <div className="space-y-4 text-zinc-600 text-sm sm:text-base leading-relaxed">
+              <div className="space-y-4 text-zinc-600 text-sm sm:text-[15px] leading-relaxed">
                 <p>
                   Rather than treating computer science purely as theoretical lectures, I learn fastest by engineering real tools. Whether it is architecting an affiliate link tracking dashboard, crafting client-side billing engines, or structuring algorithmic logic in C++ and Python, each project directly reinforces system mechanics and user ergonomics.
                 </p>
@@ -86,7 +86,7 @@ export const About: React.FC = () => {
 
             {/* 3 Core Editorial Highlights */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <div className="p-5 rounded-2xl bg-white border border-zinc-200/80 hover:border-purple-200 hover:shadow-xs transition-all">
+              <div className="p-5 sm:p-6 rounded-2xl bg-white border border-zinc-200/80 hover:border-purple-300 hover:shadow-[0_12px_28px_-8px_rgba(124,58,237,0.07)] hover:-translate-y-0.5 transition-all">
                 <div className="w-8 h-8 rounded-lg bg-purple-50 text-purple-700 flex items-center justify-center mb-3">
                   <Code className="w-4 h-4" />
                 </div>
@@ -96,7 +96,7 @@ export const About: React.FC = () => {
                 </p>
               </div>
 
-              <div className="p-5 rounded-2xl bg-white border border-zinc-200/80 hover:border-purple-200 hover:shadow-xs transition-all">
+              <div className="p-5 sm:p-6 rounded-2xl bg-white border border-zinc-200/80 hover:border-purple-300 hover:shadow-[0_12px_28px_-8px_rgba(124,58,237,0.07)] hover:-translate-y-0.5 transition-all">
                 <div className="w-8 h-8 rounded-lg bg-purple-50 text-purple-700 flex items-center justify-center mb-3">
                   <Palette className="w-4 h-4" />
                 </div>
@@ -106,7 +106,7 @@ export const About: React.FC = () => {
                 </p>
               </div>
 
-              <div className="p-5 rounded-2xl bg-white border border-zinc-200/80 hover:border-purple-200 hover:shadow-xs transition-all">
+              <div className="p-5 sm:p-6 rounded-2xl bg-white border border-zinc-200/80 hover:border-purple-300 hover:shadow-[0_12px_28px_-8px_rgba(124,58,237,0.07)] hover:-translate-y-0.5 transition-all">
                 <div className="w-8 h-8 rounded-lg bg-purple-50 text-purple-700 flex items-center justify-center mb-3">
                   <Cpu className="w-4 h-4" />
                 </div>

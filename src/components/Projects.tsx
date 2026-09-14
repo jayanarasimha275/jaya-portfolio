@@ -17,18 +17,18 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
   return (
     <section
       id="work"
-      className="py-24 sm:py-32 bg-[#fcfcfd] border-b border-zinc-200/80 relative"
+      className="py-24 sm:py-28 lg:py-32 bg-[#fcfcfd] border-b border-zinc-200/80 relative"
       aria-labelledby="work-heading"
     >
       <span id="projects" className="sr-only" aria-hidden="true" />
 
       {/* Subtle decorative purple tile */}
       <div 
-        className="absolute top-24 right-[10%] w-16 h-16 bg-purple-500/5 border border-purple-300/20 rounded-sm pointer-events-none hidden lg:block" 
+        className="absolute top-24 right-[10%] w-16 h-16 bg-purple-500/10 border border-purple-400/20 rounded-md pointer-events-none hidden lg:block" 
         aria-hidden="true" 
       />
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-8">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8">
         
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-14 sm:mb-16 gap-6">
@@ -42,7 +42,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
 
             <h2
               id="work-heading"
-              className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-zinc-950 mb-4 leading-tight"
+              className="font-display text-3xl sm:text-4xl lg:text-[42px] font-extrabold tracking-tight text-zinc-950 mb-4 leading-tight"
             >
               Things I've Built<span className="text-purple-600">.</span>
             </h2>
@@ -74,12 +74,12 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55 }}
-            className="bg-white rounded-3xl border border-zinc-200/90 shadow-2xs hover:border-purple-300 hover:shadow-sm transition-all overflow-hidden group"
+            className="bg-white rounded-2xl sm:rounded-3xl border border-zinc-200/90 shadow-[0_2px_12px_rgba(20,20,40,0.03)] hover:border-purple-300 hover:shadow-[0_20px_45px_-8px_rgba(124,58,237,0.08)] hover:-translate-y-1 transition-all overflow-hidden group"
           >
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
               
               {/* Visual Column */}
-              <div className="lg:col-span-7 bg-[#fafafc] p-6 sm:p-10 border-b lg:border-b-0 lg:border-r border-zinc-200/80 flex flex-col justify-between">
+              <div className="lg:col-span-7 bg-[#fafafc] p-6 sm:p-8 lg:p-9 border-b lg:border-b-0 lg:border-r border-zinc-200/80 flex flex-col justify-between">
                 
                 {/* Window header */}
                 <div className="flex items-center justify-between pb-4 mb-6 border-b border-zinc-200 text-xs font-mono-meta text-zinc-500">
@@ -96,7 +96,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                 </div>
 
                 {/* Visual Representation */}
-                <div className="rounded-2xl bg-white border border-zinc-200 p-5 sm:p-6 shadow-2xs group-hover:border-purple-200 transition-all">
+                <div className="rounded-2xl bg-white border border-zinc-200 p-5 sm:p-6 shadow-2xs group-hover:border-purple-200/90 transition-all">
                   <div className="grid grid-cols-3 gap-2.5 sm:gap-3 mb-5">
                     <div className="p-3 rounded-xl bg-purple-50/70 border border-purple-100">
                       <span className="text-[10px] font-mono-meta text-purple-700 uppercase block font-semibold mb-0.5">
@@ -160,7 +160,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
               </div>
 
               {/* Information Column */}
-              <div className="lg:col-span-5 p-7 sm:p-10 lg:p-12 flex flex-col justify-between">
+              <div className="lg:col-span-5 p-6 sm:p-8 lg:p-9 flex flex-col justify-between">
                 <div>
                   <div className="flex items-center justify-between pb-3.5 mb-5 border-b border-zinc-100">
                     <span className="font-mono-meta text-xs font-bold text-purple-700 tracking-wider">
@@ -192,7 +192,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                     {trackFlow.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-2.5 py-1 rounded-full bg-zinc-100 border border-zinc-200/80 text-[11px] font-mono-meta text-zinc-700"
+                        className="px-3 py-1 rounded-full bg-zinc-100/90 border border-zinc-200/80 text-[11px] font-mono-meta text-zinc-700 font-medium"
                       >
                         {tech}
                       </span>
@@ -208,7 +208,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                       href={trackFlow.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-purple-600 text-white font-semibold text-xs hover:bg-purple-700 transition-all shadow-2xs active:scale-95"
+                      className="inline-flex items-center gap-1.5 px-4.5 py-2.5 rounded-full bg-purple-600 text-white font-semibold text-xs hover:bg-purple-700 hover:-translate-y-0.5 transition-all shadow-2xs hover:shadow-xs active:scale-95"
                     >
                       <span>Live Demo</span>
                       <ExternalLink className="w-3.5 h-3.5" />
@@ -221,7 +221,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                       href={trackFlow.backendUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-white border border-zinc-300 text-zinc-800 hover:border-purple-300 hover:text-purple-700 font-semibold text-xs transition-all active:scale-95 shadow-2xs"
+                      className="inline-flex items-center gap-1.5 px-4.5 py-2.5 rounded-full bg-white border border-zinc-300 text-zinc-800 hover:border-purple-300 hover:text-purple-700 hover:-translate-y-0.5 font-semibold text-xs transition-all active:scale-95 shadow-2xs"
                     >
                       <Github className="w-3.5 h-3.5" />
                       <span>Backend</span>
@@ -231,7 +231,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                   <button
                     id="trackflow-overview-btn"
                     onClick={() => onSelectProject(trackFlow)}
-                    className="text-xs text-zinc-500 hover:text-purple-700 transition-colors ml-auto flex items-center gap-1 font-medium cursor-pointer"
+                    className="text-xs text-zinc-500 hover:text-purple-700 transition-colors ml-auto flex items-center gap-1 font-semibold cursor-pointer"
                   >
                     <span>Overview</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -252,12 +252,12 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.55 }}
-              className="bg-white rounded-3xl border border-zinc-200/90 shadow-2xs hover:border-purple-300 hover:shadow-sm transition-all overflow-hidden group"
+              className="bg-white rounded-2xl sm:rounded-3xl border border-zinc-200/90 shadow-[0_2px_12px_rgba(20,20,40,0.03)] hover:border-purple-300 hover:shadow-[0_20px_45px_-8px_rgba(124,58,237,0.08)] hover:-translate-y-1 transition-all overflow-hidden group"
             >
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
                 
                 {/* Visual Column: Invoice Receipt Graphic */}
-                <div className="lg:col-span-7 bg-[#fafafc] p-6 sm:p-10 border-b lg:border-b-0 lg:border-r border-zinc-200/80 flex flex-col justify-between">
+                <div className="lg:col-span-7 bg-[#fafafc] p-6 sm:p-8 lg:p-9 border-b lg:border-b-0 lg:border-r border-zinc-200/80 flex flex-col justify-between">
                   
                   {/* Header */}
                   <div className="flex items-center justify-between pb-4 mb-6 border-b border-zinc-200 text-xs font-mono-meta text-zinc-500">
@@ -272,7 +272,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                   </div>
 
                   {/* Visual: Simulated Invoice Sheet */}
-                  <div className="rounded-2xl bg-white border border-zinc-200 p-5 sm:p-6 shadow-2xs group-hover:border-purple-200 transition-all font-sans text-xs">
+                  <div className="rounded-2xl bg-white border border-zinc-200 p-5 sm:p-6 shadow-2xs group-hover:border-purple-200/90 transition-all font-sans text-xs">
                     <div className="flex items-center justify-between pb-3.5 mb-3.5 border-b border-zinc-100">
                       <div>
                         <span className="text-[10px] font-mono-meta text-zinc-400 uppercase tracking-wider block">Billed To</span>
@@ -325,7 +325,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                 </div>
 
                 {/* Information Column */}
-                <div className="lg:col-span-5 p-7 sm:p-10 lg:p-12 flex flex-col justify-between">
+                <div className="lg:col-span-5 p-6 sm:p-8 lg:p-9 flex flex-col justify-between">
                   <div>
                     <div className="flex items-center justify-between pb-3.5 mb-5 border-b border-zinc-100">
                       <span className="font-mono-meta text-xs font-bold text-zinc-400 tracking-wider">
@@ -357,7 +357,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                       {invoiceGen.technologies.map((tech) => (
                         <span
                           key={tech}
-                          className="px-2.5 py-1 rounded-full bg-zinc-100 border border-zinc-200/80 text-[11px] font-mono-meta text-zinc-700"
+                          className="px-3 py-1 rounded-full bg-zinc-100/90 border border-zinc-200/80 text-[11px] font-mono-meta text-zinc-700 font-medium"
                         >
                           {tech}
                         </span>
@@ -372,7 +372,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                         href={invoiceGen.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-zinc-950 hover:bg-purple-700 text-white font-semibold text-xs transition-all shadow-2xs active:scale-95"
+                        className="inline-flex items-center gap-1.5 px-4.5 py-2.5 rounded-full bg-zinc-950 hover:bg-purple-700 hover:-translate-y-0.5 text-white font-semibold text-xs transition-all shadow-2xs hover:shadow-xs active:scale-95"
                       >
                         <Github className="w-3.5 h-3.5" />
                         <span>Source Code</span>
@@ -381,7 +381,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
 
                     <button
                       onClick={() => onSelectProject(invoiceGen)}
-                      className="text-xs text-zinc-500 hover:text-purple-700 transition-colors ml-auto flex items-center gap-1 font-medium cursor-pointer"
+                      className="text-xs text-zinc-500 hover:text-purple-700 transition-colors ml-auto flex items-center gap-1 font-semibold cursor-pointer"
                     >
                       <span>Project Details</span>
                       <ArrowRight className="w-3.5 h-3.5" />
@@ -403,12 +403,12 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.55 }}
-              className="bg-white rounded-3xl border border-zinc-200/90 shadow-2xs hover:border-purple-300 hover:shadow-sm transition-all overflow-hidden group"
+              className="bg-white rounded-2xl sm:rounded-3xl border border-zinc-200/90 shadow-[0_2px_12px_rgba(20,20,40,0.03)] hover:border-purple-300 hover:shadow-[0_20px_45px_-8px_rgba(124,58,237,0.08)] hover:-translate-y-1 transition-all overflow-hidden group"
             >
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
                 
                 {/* Visual Column: Discovery Directory Preview */}
-                <div className="lg:col-span-7 bg-[#fafafc] p-6 sm:p-10 border-b lg:border-b-0 lg:border-r border-zinc-200/80 flex flex-col justify-between">
+                <div className="lg:col-span-7 bg-[#fafafc] p-6 sm:p-8 lg:p-9 border-b lg:border-b-0 lg:border-r border-zinc-200/80 flex flex-col justify-between">
                   
                   {/* Header */}
                   <div className="flex items-center justify-between pb-4 mb-6 border-b border-zinc-200 text-xs font-mono-meta text-zinc-500">
@@ -420,7 +420,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                   </div>
 
                   {/* Visual: Search and Place Cards */}
-                  <div className="rounded-2xl bg-white border border-zinc-200 p-5 sm:p-6 shadow-2xs group-hover:border-purple-200 transition-all font-sans text-xs space-y-3">
+                  <div className="rounded-2xl bg-white border border-zinc-200 p-5 sm:p-6 shadow-2xs group-hover:border-purple-200/90 transition-all font-sans text-xs space-y-3">
                     
                     {/* Fake search bar */}
                     <div className="flex items-center gap-2 p-2.5 rounded-xl bg-zinc-50 border border-zinc-200 text-zinc-400">
@@ -468,7 +468,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                 </div>
 
                 {/* Information Column */}
-                <div className="lg:col-span-5 p-7 sm:p-10 lg:p-12 flex flex-col justify-between">
+                <div className="lg:col-span-5 p-6 sm:p-8 lg:p-9 flex flex-col justify-between">
                   <div>
                     <div className="flex items-center justify-between pb-3.5 mb-5 border-b border-zinc-100">
                       <span className="font-mono-meta text-xs font-bold text-zinc-400 tracking-wider">
@@ -500,7 +500,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                       {localGuide.technologies.map((tech) => (
                         <span
                           key={tech}
-                          className="px-2.5 py-1 rounded-full bg-zinc-100 border border-zinc-200/80 text-[11px] font-mono-meta text-zinc-700"
+                          className="px-3 py-1 rounded-full bg-zinc-100/90 border border-zinc-200/80 text-[11px] font-mono-meta text-zinc-700 font-medium"
                         >
                           {tech}
                         </span>
@@ -512,7 +512,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                   <div className="pt-5 border-t border-zinc-100 flex items-center">
                     <button
                       onClick={() => onSelectProject(localGuide)}
-                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-zinc-950 hover:bg-purple-700 text-white font-semibold text-xs transition-all shadow-2xs active:scale-95 cursor-pointer"
+                      className="inline-flex items-center gap-1.5 px-4.5 py-2.5 rounded-full bg-zinc-950 hover:bg-purple-700 hover:-translate-y-0.5 text-white font-semibold text-xs transition-all shadow-2xs hover:shadow-xs active:scale-95 cursor-pointer"
                     >
                       <span>Explore Case Details</span>
                       <ArrowRight className="w-3.5 h-3.5" />
@@ -534,12 +534,12 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.55 }}
-              className="bg-white rounded-3xl border border-zinc-200/90 shadow-2xs hover:border-purple-300 hover:shadow-sm transition-all overflow-hidden group"
+              className="bg-white rounded-2xl sm:rounded-3xl border border-zinc-200/90 shadow-[0_2px_12px_rgba(20,20,40,0.03)] hover:border-purple-300 hover:shadow-[0_20px_45px_-8px_rgba(124,58,237,0.08)] hover:-translate-y-1 transition-all overflow-hidden group"
             >
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
                 
                 {/* Visual Column: Code & Architecture Preview */}
-                <div className="lg:col-span-7 bg-[#fafafc] p-6 sm:p-10 border-b lg:border-b-0 lg:border-r border-zinc-200/80 flex flex-col justify-between">
+                <div className="lg:col-span-7 bg-[#fafafc] p-6 sm:p-8 lg:p-9 border-b lg:border-b-0 lg:border-r border-zinc-200/80 flex flex-col justify-between">
                   
                   {/* Header */}
                   <div className="flex items-center justify-between pb-4 mb-6 border-b border-zinc-200 text-xs font-mono-meta text-zinc-500">
@@ -551,8 +551,8 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                   </div>
 
                   {/* Visual: Code structure & Architecture preview */}
-                  <div className="rounded-2xl bg-white border border-zinc-200 p-5 sm:p-6 shadow-2xs group-hover:border-purple-200 transition-all font-mono-meta text-xs space-y-3">
-                    <div className="p-3 rounded-xl bg-zinc-900 text-zinc-100 text-[11px] leading-relaxed overflow-hidden">
+                  <div className="rounded-2xl bg-white border border-zinc-200 p-5 sm:p-6 shadow-2xs group-hover:border-purple-200/90 transition-all font-mono-meta text-xs space-y-3">
+                    <div className="p-3.5 rounded-xl bg-zinc-900 text-zinc-100 text-[11px] leading-relaxed overflow-hidden">
                       <span className="text-zinc-500">// Editorial Portfolio Architecture</span>
                       <p className="mt-1 text-purple-300">import <span className="text-white">&#123; PERSONAL_INFO, PROJECTS &#125;</span> from <span className="text-emerald-300">'./data'</span>;</p>
                       <p className="text-zinc-300 mt-1">const <span className="text-yellow-300">Portfolio</span> = () =&gt; &#123;</p>
@@ -581,7 +581,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                 </div>
 
                 {/* Information Column */}
-                <div className="lg:col-span-5 p-7 sm:p-10 lg:p-12 flex flex-col justify-between">
+                <div className="lg:col-span-5 p-6 sm:p-8 lg:p-9 flex flex-col justify-between">
                   <div>
                     <div className="flex items-center justify-between pb-3.5 mb-5 border-b border-zinc-100">
                       <span className="font-mono-meta text-xs font-bold text-zinc-400 tracking-wider">
@@ -613,7 +613,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                       {portfolioProj.technologies.map((tech) => (
                         <span
                           key={tech}
-                          className="px-2.5 py-1 rounded-full bg-zinc-100 border border-zinc-200/80 text-[11px] font-mono-meta text-zinc-700"
+                          className="px-3 py-1 rounded-full bg-zinc-100/90 border border-zinc-200/80 text-[11px] font-mono-meta text-zinc-700 font-medium"
                         >
                           {tech}
                         </span>
@@ -628,7 +628,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                         href={portfolioProj.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-zinc-950 hover:bg-purple-700 text-white font-semibold text-xs transition-all shadow-2xs active:scale-95"
+                        className="inline-flex items-center gap-1.5 px-4.5 py-2.5 rounded-full bg-zinc-950 hover:bg-purple-700 hover:-translate-y-0.5 text-white font-semibold text-xs transition-all shadow-2xs hover:shadow-xs active:scale-95"
                       >
                         <Github className="w-3.5 h-3.5" />
                         <span>Source Code</span>
@@ -637,7 +637,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
 
                     <button
                       onClick={() => onSelectProject(portfolioProj)}
-                      className="text-xs text-zinc-500 hover:text-purple-700 transition-colors ml-auto flex items-center gap-1 font-medium cursor-pointer"
+                      className="text-xs text-zinc-500 hover:text-purple-700 transition-colors ml-auto flex items-center gap-1 font-semibold cursor-pointer"
                     >
                       <span>Project Details</span>
                       <ArrowRight className="w-3.5 h-3.5" />

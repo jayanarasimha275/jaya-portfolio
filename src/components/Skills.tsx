@@ -46,16 +46,16 @@ export const Skills: React.FC = () => {
   return (
     <section
       id="skills"
-      className="py-24 sm:py-32 bg-white border-b border-zinc-200/80 relative"
+      className="py-24 sm:py-28 lg:py-32 bg-white border-b border-zinc-200/80 relative"
       aria-labelledby="skills-heading"
     >
       {/* Decorative soft purple block */}
       <div 
-        className="absolute top-16 left-[10%] w-16 h-16 bg-purple-500/5 border border-purple-300/20 rounded-sm pointer-events-none hidden md:block" 
+        className="absolute top-16 left-[10%] w-16 h-16 bg-purple-500/10 border border-purple-400/20 rounded-md pointer-events-none hidden md:block" 
         aria-hidden="true" 
       />
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-8">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8">
         
         {/* Section Header */}
         <div className="max-w-3xl mb-14 sm:mb-16">
@@ -68,7 +68,7 @@ export const Skills: React.FC = () => {
 
           <h2
             id="skills-heading"
-            className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-zinc-950 mb-4 leading-tight"
+            className="font-display text-3xl sm:text-4xl lg:text-[42px] font-extrabold tracking-tight text-zinc-950 mb-4 leading-tight"
           >
             Skills<span className="text-purple-600">.</span>
           </h2>
@@ -79,7 +79,7 @@ export const Skills: React.FC = () => {
         </div>
 
         {/* 4 Clean Editorial Columns */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-7">
           {SKILL_SECTIONS.map((section, index) => {
             const IconComponent = section.icon;
             return (
@@ -89,13 +89,13 @@ export const Skills: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.07 }}
-                className="bg-[#fafafc] rounded-3xl p-6 sm:p-7 border border-zinc-200/90 shadow-2xs hover:border-purple-200 hover:shadow-xs transition-all flex flex-col justify-between group"
+                className="bg-[#fafafc] rounded-2xl sm:rounded-3xl p-6 sm:p-7 border border-zinc-200/90 shadow-[0_2px_10px_rgba(20,20,40,0.025)] hover:border-purple-300 hover:shadow-[0_16px_36px_-8px_rgba(124,58,237,0.08)] hover:-translate-y-1 transition-all flex flex-col justify-between group"
               >
                 <div>
                   {/* Category Header */}
                   <div className="pb-4 mb-5 border-b border-zinc-200/80 flex items-center justify-between">
                     <div className="flex items-center gap-2.5">
-                      <div className="w-7 h-7 rounded-lg bg-purple-50 text-purple-700 flex items-center justify-center">
+                      <div className="w-7 h-7 rounded-lg bg-purple-50 text-purple-700 flex items-center justify-center shadow-2xs">
                         <IconComponent className="w-4 h-4" />
                       </div>
                       <h3 className="font-display text-sm font-bold text-zinc-950 tracking-normal">
@@ -116,7 +116,7 @@ export const Skills: React.FC = () => {
                     {section.skills.map((skill) => (
                       <div
                         key={skill.name}
-                        className="p-3 rounded-xl bg-white border border-zinc-200/70 hover:border-purple-200 transition-colors"
+                        className="p-3 rounded-xl bg-white border border-zinc-200/70 hover:border-purple-200/90 hover:shadow-2xs transition-all"
                       >
                         <div className="flex items-center justify-between mb-1">
                           <span className="text-xs font-bold text-zinc-900">

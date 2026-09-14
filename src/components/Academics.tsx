@@ -7,18 +7,18 @@ export const Academics: React.FC = () => {
   return (
     <section
       id="journey"
-      className="py-24 sm:py-32 bg-white border-b border-zinc-200/80 relative overflow-hidden"
+      className="py-24 sm:py-28 lg:py-32 bg-white border-b border-zinc-200/80 relative overflow-hidden"
       aria-labelledby="journey-heading"
     >
       <span id="academics" className="sr-only" aria-hidden="true" />
 
       {/* Decorative background grid tile */}
       <div 
-        className="absolute top-20 left-[6%] w-16 h-16 bg-purple-500/5 border border-purple-300/20 rounded-sm pointer-events-none hidden md:block" 
+        className="absolute top-20 left-[6%] w-16 h-16 bg-purple-500/10 border border-purple-400/20 rounded-md pointer-events-none hidden md:block" 
         aria-hidden="true" 
       />
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-8">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8">
         
         {/* Section Header with Large Typography */}
         <div className="max-w-3xl mb-14 sm:mb-16">
@@ -31,7 +31,7 @@ export const Academics: React.FC = () => {
 
           <h2
             id="journey-heading"
-            className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-zinc-950 mb-4 leading-tight"
+            className="font-display text-3xl sm:text-4xl lg:text-[42px] font-extrabold tracking-tight text-zinc-950 mb-4 leading-tight"
           >
             My Journey<span className="text-purple-600">.</span>
           </h2>
@@ -54,13 +54,13 @@ export const Academics: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: idx * 0.1 }}
-                className="bg-[#fafafc] rounded-3xl p-7 sm:p-8 border border-zinc-200/90 shadow-2xs hover:border-purple-200 hover:shadow-sm transition-all flex flex-col justify-between group"
+                className="bg-[#fafafc] rounded-2xl sm:rounded-3xl p-7 sm:p-8 border border-zinc-200/90 shadow-[0_2px_10px_rgba(20,20,40,0.025)] hover:border-purple-300 hover:shadow-[0_16px_36px_-8px_rgba(124,58,237,0.08)] hover:-translate-y-1 transition-all flex flex-col justify-between group"
               >
                 <div>
                   {/* Step indicator & Period */}
                   <div className="flex items-center justify-between pb-4 mb-5 border-b border-zinc-200/80">
                     <div className="flex items-center gap-2">
-                      <span className="w-6 h-6 rounded-full bg-purple-600 text-white text-xs font-semibold flex items-center justify-center font-mono-meta">
+                      <span className="w-6 h-6 rounded-full bg-purple-600 text-white text-xs font-semibold flex items-center justify-center font-mono-meta shadow-2xs">
                         0{idx + 1}
                       </span>
                       <span className="text-xs font-mono-meta font-semibold text-purple-700 uppercase tracking-wider">
@@ -69,7 +69,7 @@ export const Academics: React.FC = () => {
                     </div>
 
                     {milestone.active ? (
-                      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-purple-100 text-purple-800">
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-purple-100/80 text-purple-800 border border-purple-200/60">
                         <span className="w-1.5 h-1.5 rounded-full bg-purple-600 animate-pulse" />
                         Current
                       </span>
@@ -110,9 +110,9 @@ export const Academics: React.FC = () => {
         </div>
 
         {/* Verification & Context Banner */}
-        <div className="mt-12 p-6 sm:p-7 rounded-2xl bg-[#fafafc] border border-zinc-200/90 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div className="mt-12 p-6 sm:p-7 rounded-2xl sm:rounded-3xl bg-[#fafafc] border border-zinc-200/90 shadow-[0_2px_8px_rgba(20,20,40,0.02)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-purple-50 border border-purple-100 text-purple-700 flex items-center justify-center shrink-0">
+            <div className="w-9 h-9 rounded-xl bg-purple-50 border border-purple-100 text-purple-700 flex items-center justify-center shrink-0 shadow-2xs">
               <CheckCircle2 className="w-5 h-5" />
             </div>
             <div>
