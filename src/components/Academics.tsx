@@ -7,7 +7,7 @@ export const Academics: React.FC = () => {
   return (
     <section
       id="journey"
-      className="py-24 sm:py-28 lg:py-32 bg-white border-b border-zinc-200/80 relative overflow-hidden"
+      className="py-16 sm:py-20 lg:py-24 bg-white border-b border-zinc-200/80 relative overflow-hidden"
       aria-labelledby="journey-heading"
     >
       <span id="academics" className="sr-only" aria-hidden="true" />
@@ -21,8 +21,8 @@ export const Academics: React.FC = () => {
       <div className="max-w-6xl mx-auto px-6 sm:px-8">
         
         {/* Section Header with Large Typography */}
-        <div className="max-w-3xl mb-14 sm:mb-16">
-          <div className="inline-flex items-center gap-2 mb-3.5">
+        <div className="max-w-3xl mb-10 sm:mb-12">
+          <div className="inline-flex items-center gap-2 mb-2.5">
             <span className="w-2 h-2 rounded-full bg-purple-600" />
             <span className="text-xs font-mono-meta font-semibold text-purple-700 uppercase tracking-widest">
               02 / Academic Journey
@@ -31,12 +31,12 @@ export const Academics: React.FC = () => {
 
           <h2
             id="journey-heading"
-            className="font-display text-3xl sm:text-4xl lg:text-[42px] font-extrabold tracking-tight text-zinc-950 mb-4 leading-tight"
+            className="font-display text-2xl sm:text-3xl lg:text-[38px] font-extrabold tracking-tight text-zinc-950 mb-3 leading-tight"
           >
             My Journey<span className="text-purple-600">.</span>
           </h2>
 
-          <p className="text-base sm:text-lg text-zinc-600 font-normal leading-relaxed">
+          <p className="text-sm sm:text-base text-zinc-600 font-normal leading-relaxed">
             A chronological timeline of academic performance, mathematical foundations, and ongoing computer science studies at SRM University-AP.
           </p>
         </div>
@@ -46,7 +46,7 @@ export const Academics: React.FC = () => {
           {/* Subtle horizontal timeline track for larger screens */}
           <div className="hidden lg:block absolute top-24 left-8 right-8 h-[1px] bg-purple-100/90 -z-0" />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 relative z-10">
             {JOURNEY_MILESTONES.map((milestone, idx) => (
               <motion.div
                 key={milestone.title}
@@ -54,13 +54,13 @@ export const Academics: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: idx * 0.1 }}
-                className="bg-[#fafafc] rounded-2xl sm:rounded-3xl p-7 sm:p-8 border border-zinc-200/90 shadow-[0_2px_10px_rgba(20,20,40,0.025)] hover:border-purple-300 hover:shadow-[0_16px_36px_-8px_rgba(124,58,237,0.08)] hover:-translate-y-1 transition-all flex flex-col justify-between group"
+                className="bg-[#fafafc] rounded-2xl sm:rounded-3xl p-6 sm:p-7 border border-zinc-200/90 shadow-[0_2px_10px_rgba(20,20,40,0.025)] hover:border-purple-300 hover:shadow-[0_16px_36px_-8px_rgba(124,58,237,0.08)] hover:-translate-y-1 transition-all flex flex-col justify-between group"
               >
                 <div>
                   {/* Step indicator & Period */}
-                  <div className="flex items-center justify-between pb-4 mb-5 border-b border-zinc-200/80">
+                  <div className="flex items-center justify-between pb-3.5 mb-4 border-b border-zinc-200/80">
                     <div className="flex items-center gap-2">
-                      <span className="w-6 h-6 rounded-full bg-purple-600 text-white text-xs font-semibold flex items-center justify-center font-mono-meta shadow-2xs">
+                      <span className="w-5.5 h-5.5 rounded-full bg-purple-600 text-white text-[11px] font-semibold flex items-center justify-center font-mono-meta shadow-2xs">
                         0{idx + 1}
                       </span>
                       <span className="text-xs font-mono-meta font-semibold text-purple-700 uppercase tracking-wider">
@@ -79,28 +79,28 @@ export const Academics: React.FC = () => {
                   </div>
 
                   {/* Metric Display */}
-                  <div className="mb-5">
-                    <div className="font-display text-3xl sm:text-4xl font-extrabold text-zinc-950 tracking-tight mb-1 group-hover:text-purple-700 transition-colors">
+                  <div className="mb-4">
+                    <div className="font-display text-2xl sm:text-3xl font-extrabold text-zinc-950 tracking-tight mb-0.5 group-hover:text-purple-700 transition-colors">
                       {milestone.metric}
                     </div>
-                    <div className="text-[11px] font-semibold text-zinc-500 uppercase tracking-wider font-mono-meta">
+                    <div className="text-[10.5px] font-semibold text-zinc-500 uppercase tracking-wider font-mono-meta">
                       {milestone.metricLabel}
                     </div>
                   </div>
 
                   {/* Milestone Title */}
-                  <h3 className="text-base sm:text-lg font-bold text-zinc-900 mb-2 tracking-tight">
+                  <h3 className="text-base font-bold text-zinc-900 mb-1.5 tracking-tight">
                     {milestone.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-sm text-zinc-600 leading-relaxed font-normal mb-6">
+                  <p className="text-xs sm:text-[13.5px] text-zinc-600 leading-relaxed font-normal mb-5">
                     {milestone.description}
                   </p>
                 </div>
 
                 {/* Institution Footer */}
-                <div className="pt-4 border-t border-zinc-200/80 flex items-center justify-between text-xs text-zinc-500">
+                <div className="pt-3.5 border-t border-zinc-200/80 flex items-center justify-between text-xs text-zinc-500">
                   <span className="font-medium text-zinc-700">{milestone.institution}</span>
                   <ChevronRight className="w-3.5 h-3.5 text-zinc-400 group-hover:text-purple-600 group-hover:translate-x-0.5 transition-all" />
                 </div>
@@ -110,16 +110,16 @@ export const Academics: React.FC = () => {
         </div>
 
         {/* Verification & Context Banner */}
-        <div className="mt-12 p-6 sm:p-7 rounded-2xl sm:rounded-3xl bg-[#fafafc] border border-zinc-200/90 shadow-[0_2px_8px_rgba(20,20,40,0.02)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div className="mt-8 sm:mt-10 p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-[#fafafc] border border-zinc-200/90 shadow-[0_2px_8px_rgba(20,20,40,0.02)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-purple-50 border border-purple-100 text-purple-700 flex items-center justify-center shrink-0 shadow-2xs">
-              <CheckCircle2 className="w-5 h-5" />
+            <div className="w-8.5 h-8.5 rounded-xl bg-purple-50 border border-purple-100 text-purple-700 flex items-center justify-center shrink-0 shadow-2xs">
+              <CheckCircle2 className="w-4.5 h-4.5" />
             </div>
             <div>
-              <p className="text-sm font-semibold text-zinc-900">
+              <p className="text-xs sm:text-sm font-semibold text-zinc-900">
                 Department of Computer Science and Engineering
               </p>
-              <p className="text-xs text-zinc-500">
+              <p className="text-[11.5px] text-zinc-500">
                 SRM University-AP, Mangalagiri · 9.10 CGPA specifically represents First-Year Academic Performance
               </p>
             </div>

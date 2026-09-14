@@ -37,7 +37,7 @@ export const Interests: React.FC = () => {
   return (
     <section
       id="building"
-      className="py-24 sm:py-28 lg:py-32 bg-[#fcfcfd] border-b border-zinc-200/80 relative"
+      className="py-16 sm:py-20 lg:py-24 bg-[#fcfcfd] border-b border-zinc-200/80 relative"
       aria-labelledby="building-heading"
     >
       <span id="exploring" className="sr-only" aria-hidden="true" />
@@ -51,8 +51,8 @@ export const Interests: React.FC = () => {
 
       <div className="max-w-6xl mx-auto px-6 sm:px-8">
         {/* Section Header */}
-        <div className="max-w-3xl mb-14 sm:mb-16">
-          <div className="inline-flex items-center gap-2 mb-3.5">
+        <div className="max-w-3xl mb-10 sm:mb-12">
+          <div className="inline-flex items-center gap-2 mb-2.5">
             <span className="w-2 h-2 rounded-full bg-purple-600" />
             <span className="text-xs font-mono-meta font-semibold text-purple-700 uppercase tracking-widest">
               03 / Areas of Focus
@@ -61,7 +61,7 @@ export const Interests: React.FC = () => {
 
           <h2
             id="building-heading"
-            className="font-display text-3xl sm:text-4xl lg:text-[42px] font-extrabold tracking-tight text-zinc-950 mb-4 leading-tight"
+            className="font-display text-2xl sm:text-3xl lg:text-[38px] font-extrabold tracking-tight text-zinc-950 mb-3.5 leading-tight"
           >
             What I'm Building<span className="text-purple-600">.</span>
           </h2>
@@ -72,7 +72,7 @@ export const Interests: React.FC = () => {
         </div>
 
         {/* 4 Large Editorial Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
           {BUILDING_AREAS.map((area, index) => {
             const IconComponent = area.icon;
             return (
@@ -82,14 +82,14 @@ export const Interests: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: index * 0.08 }}
-                className="bg-white rounded-2xl sm:rounded-3xl p-8 sm:p-9 border border-zinc-200/90 shadow-[0_2px_12px_rgba(20,20,40,0.03)] hover:border-purple-300 hover:shadow-[0_20px_45px_-8px_rgba(124,58,237,0.09)] hover:-translate-y-1 transition-all flex flex-col justify-between group relative overflow-hidden"
+                className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-zinc-200/90 shadow-[0_2px_12px_rgba(20,20,40,0.03)] hover:border-purple-300 hover:shadow-[0_20px_45px_-8px_rgba(124,58,237,0.09)] hover:-translate-y-1 transition-all flex flex-col justify-between group relative overflow-hidden"
               >
                 {/* Subtle soft purple highlight in the background */}
                 <div className="absolute top-0 right-0 w-36 h-36 bg-purple-50/50 rounded-full blur-2xl pointer-events-none group-hover:bg-purple-100/50 transition-colors" />
 
                 <div>
                   {/* Card Top: Number and Icon */}
-                  <div className="flex items-center justify-between pb-5 mb-6 border-b border-zinc-100">
+                  <div className="flex items-center justify-between pb-4 mb-5 border-b border-zinc-100">
                     <span className="font-mono-meta text-2xl sm:text-3xl font-bold text-zinc-300 group-hover:text-purple-600 transition-colors">
                       {area.number}
                     </span>
@@ -99,18 +99,18 @@ export const Interests: React.FC = () => {
                   </div>
 
                   {/* Title */}
-                  <h3 className="font-display text-xl sm:text-2xl font-bold text-zinc-950 mb-3 tracking-tight group-hover:text-purple-900 transition-colors">
+                  <h3 className="font-display text-lg sm:text-xl font-bold text-zinc-950 mb-2.5 tracking-tight group-hover:text-purple-900 transition-colors">
                     {area.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-sm sm:text-base text-zinc-600 leading-relaxed font-normal mb-8">
+                  <p className="text-sm sm:text-base text-zinc-600 leading-relaxed font-normal mb-6">
                     {area.description}
                   </p>
                 </div>
 
                 {/* Tags */}
-                <div className="pt-5 border-t border-zinc-100 flex flex-wrap gap-2">
+                <div className="pt-4 border-t border-zinc-100 flex flex-wrap gap-2">
                   {area.tags.map((tag) => (
                     <span
                       key={tag}

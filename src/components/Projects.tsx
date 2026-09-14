@@ -17,7 +17,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
   return (
     <section
       id="work"
-      className="py-24 sm:py-28 lg:py-32 bg-[#fcfcfd] border-b border-zinc-200/80 relative"
+      className="py-16 sm:py-20 lg:py-24 bg-[#fcfcfd] border-b border-zinc-200/80 relative"
       aria-labelledby="work-heading"
     >
       <span id="projects" className="sr-only" aria-hidden="true" />
@@ -31,9 +31,9 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
       <div className="max-w-6xl mx-auto px-6 sm:px-8">
         
         {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-14 sm:mb-16 gap-6">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 sm:mb-12 gap-6">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 mb-3.5">
+            <div className="inline-flex items-center gap-2 mb-2.5">
               <span className="w-2 h-2 rounded-full bg-purple-600" />
               <span className="text-xs font-mono-meta font-semibold text-purple-700 uppercase tracking-widest">
                 05 / Selected Work
@@ -42,7 +42,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
 
             <h2
               id="work-heading"
-              className="font-display text-3xl sm:text-4xl lg:text-[42px] font-extrabold tracking-tight text-zinc-950 mb-4 leading-tight"
+              className="font-display text-2xl sm:text-3xl lg:text-[38px] font-extrabold tracking-tight text-zinc-950 mb-3.5 leading-tight"
             >
               Things I've Built<span className="text-purple-600">.</span>
             </h2>
@@ -64,7 +64,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
         </div>
 
         {/* Case Studies Container */}
-        <div className="space-y-12 sm:space-y-16">
+        <div className="space-y-8 sm:space-y-10">
 
           {/* ============================================================ */}
           {/* 01 — TRACKFLOW (FEATURED PROJECT) */}
@@ -79,7 +79,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
               
               {/* Visual Column */}
-              <div className="lg:col-span-7 bg-[#fafafc] p-6 sm:p-8 lg:p-9 border-b lg:border-b-0 lg:border-r border-zinc-200/80 flex flex-col justify-between">
+              <div className="lg:col-span-7 bg-[#fafafc] p-5 sm:p-7 lg:p-8 border-b lg:border-b-0 lg:border-r border-zinc-200/80 flex flex-col justify-between">
                 
                 {/* Window header */}
                 <div className="flex items-center justify-between pb-4 mb-6 border-b border-zinc-200 text-xs font-mono-meta text-zinc-500">
@@ -160,7 +160,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
               </div>
 
               {/* Information Column */}
-              <div className="lg:col-span-5 p-6 sm:p-8 lg:p-9 flex flex-col justify-between">
+              <div className="lg:col-span-5 p-5 sm:p-7 lg:p-8 flex flex-col justify-between">
                 <div>
                   <div className="flex items-center justify-between pb-3.5 mb-5 border-b border-zinc-100">
                     <span className="font-mono-meta text-xs font-bold text-purple-700 tracking-wider">
@@ -257,7 +257,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
                 
                 {/* Visual Column: Invoice Receipt Graphic */}
-                <div className="lg:col-span-7 bg-[#fafafc] p-6 sm:p-8 lg:p-9 border-b lg:border-b-0 lg:border-r border-zinc-200/80 flex flex-col justify-between">
+                <div className="lg:col-span-7 bg-[#fafafc] p-5 sm:p-7 lg:p-8 border-b lg:border-b-0 lg:border-r border-zinc-200/80 flex flex-col justify-between">
                   
                   {/* Header */}
                   <div className="flex items-center justify-between pb-4 mb-6 border-b border-zinc-200 text-xs font-mono-meta text-zinc-500">
@@ -325,7 +325,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                 </div>
 
                 {/* Information Column */}
-                <div className="lg:col-span-5 p-6 sm:p-8 lg:p-9 flex flex-col justify-between">
+                <div className="lg:col-span-5 p-5 sm:p-7 lg:p-8 flex flex-col justify-between">
                   <div>
                     <div className="flex items-center justify-between pb-3.5 mb-5 border-b border-zinc-100">
                       <span className="font-mono-meta text-xs font-bold text-zinc-400 tracking-wider">
@@ -408,7 +408,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
                 
                 {/* Visual Column: Discovery Directory Preview */}
-                <div className="lg:col-span-7 bg-[#fafafc] p-6 sm:p-8 lg:p-9 border-b lg:border-b-0 lg:border-r border-zinc-200/80 flex flex-col justify-between">
+                <div className="lg:col-span-7 bg-[#fafafc] p-5 sm:p-7 lg:p-8 border-b lg:border-b-0 lg:border-r border-zinc-200/80 flex flex-col justify-between">
                   
                   {/* Header */}
                   <div className="flex items-center justify-between pb-4 mb-6 border-b border-zinc-200 text-xs font-mono-meta text-zinc-500">
@@ -468,7 +468,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                 </div>
 
                 {/* Information Column */}
-                <div className="lg:col-span-5 p-6 sm:p-8 lg:p-9 flex flex-col justify-between">
+                <div className="lg:col-span-5 p-5 sm:p-7 lg:p-8 flex flex-col justify-between">
                   <div>
                     <div className="flex items-center justify-between pb-3.5 mb-5 border-b border-zinc-100">
                       <span className="font-mono-meta text-xs font-bold text-zinc-400 tracking-wider">
@@ -539,7 +539,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
                 
                 {/* Visual Column: Code & Architecture Preview */}
-                <div className="lg:col-span-7 bg-[#fafafc] p-6 sm:p-8 lg:p-9 border-b lg:border-b-0 lg:border-r border-zinc-200/80 flex flex-col justify-between">
+                <div className="lg:col-span-7 bg-[#fafafc] p-5 sm:p-7 lg:p-8 border-b lg:border-b-0 lg:border-r border-zinc-200/80 flex flex-col justify-between">
                   
                   {/* Header */}
                   <div className="flex items-center justify-between pb-4 mb-6 border-b border-zinc-200 text-xs font-mono-meta text-zinc-500">
@@ -581,7 +581,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                 </div>
 
                 {/* Information Column */}
-                <div className="lg:col-span-5 p-6 sm:p-8 lg:p-9 flex flex-col justify-between">
+                <div className="lg:col-span-5 p-5 sm:p-7 lg:p-8 flex flex-col justify-between">
                   <div>
                     <div className="flex items-center justify-between pb-3.5 mb-5 border-b border-zinc-100">
                       <span className="font-mono-meta text-xs font-bold text-zinc-400 tracking-wider">

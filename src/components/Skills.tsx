@@ -46,7 +46,7 @@ export const Skills: React.FC = () => {
   return (
     <section
       id="skills"
-      className="py-24 sm:py-28 lg:py-32 bg-white border-b border-zinc-200/80 relative"
+      className="py-16 sm:py-20 lg:py-24 bg-white border-b border-zinc-200/80 relative"
       aria-labelledby="skills-heading"
     >
       {/* Decorative soft purple block */}
@@ -58,8 +58,8 @@ export const Skills: React.FC = () => {
       <div className="max-w-6xl mx-auto px-6 sm:px-8">
         
         {/* Section Header */}
-        <div className="max-w-3xl mb-14 sm:mb-16">
-          <div className="inline-flex items-center gap-2 mb-3.5">
+        <div className="max-w-3xl mb-10 sm:mb-12">
+          <div className="inline-flex items-center gap-2 mb-2.5">
             <span className="w-2 h-2 rounded-full bg-purple-600" />
             <span className="text-xs font-mono-meta font-semibold text-purple-700 uppercase tracking-widest">
               04 / Toolkit &amp; Capabilities
@@ -68,7 +68,7 @@ export const Skills: React.FC = () => {
 
           <h2
             id="skills-heading"
-            className="font-display text-3xl sm:text-4xl lg:text-[42px] font-extrabold tracking-tight text-zinc-950 mb-4 leading-tight"
+            className="font-display text-2xl sm:text-3xl lg:text-[38px] font-extrabold tracking-tight text-zinc-950 mb-3.5 leading-tight"
           >
             Skills<span className="text-purple-600">.</span>
           </h2>
@@ -79,7 +79,7 @@ export const Skills: React.FC = () => {
         </div>
 
         {/* 4 Clean Editorial Columns */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-7">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
           {SKILL_SECTIONS.map((section, index) => {
             const IconComponent = section.icon;
             return (
@@ -89,11 +89,11 @@ export const Skills: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.07 }}
-                className="bg-[#fafafc] rounded-2xl sm:rounded-3xl p-6 sm:p-7 border border-zinc-200/90 shadow-[0_2px_10px_rgba(20,20,40,0.025)] hover:border-purple-300 hover:shadow-[0_16px_36px_-8px_rgba(124,58,237,0.08)] hover:-translate-y-1 transition-all flex flex-col justify-between group"
+                className="bg-[#fafafc] rounded-2xl sm:rounded-3xl p-5 sm:p-6 border border-zinc-200/90 shadow-[0_2px_10px_rgba(20,20,40,0.025)] hover:border-purple-300 hover:shadow-[0_16px_36px_-8px_rgba(124,58,237,0.08)] hover:-translate-y-1 transition-all flex flex-col justify-between group"
               >
                 <div>
                   {/* Category Header */}
-                  <div className="pb-4 mb-5 border-b border-zinc-200/80 flex items-center justify-between">
+                  <div className="pb-3.5 mb-4 border-b border-zinc-200/80 flex items-center justify-between">
                     <div className="flex items-center gap-2.5">
                       <div className="w-7 h-7 rounded-lg bg-purple-50 text-purple-700 flex items-center justify-center shadow-2xs">
                         <IconComponent className="w-4 h-4" />
@@ -107,7 +107,7 @@ export const Skills: React.FC = () => {
                     </span>
                   </div>
 
-                  <p className="text-xs text-zinc-500 mb-5 leading-relaxed">
+                  <p className="text-xs text-zinc-500 mb-4 leading-relaxed">
                     {section.description}
                   </p>
 
@@ -132,7 +132,7 @@ export const Skills: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="pt-5 mt-5 border-t border-zinc-200/80 text-[11px] font-mono-meta text-purple-700 font-semibold">
+                <div className="pt-4 mt-4 border-t border-zinc-200/80 text-[11px] font-mono-meta text-purple-700 font-semibold">
                   {section.skills.length} {section.skills.length === 1 ? 'Technology' : 'Technologies'}
                 </div>
               </motion.div>

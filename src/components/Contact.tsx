@@ -28,7 +28,7 @@ export const Contact: React.FC = () => {
   return (
     <section
       id="contact"
-      className="py-24 sm:py-28 lg:py-32 bg-white border-b border-zinc-200/80 relative overflow-hidden bg-grid-pattern"
+      className="py-16 sm:py-20 lg:py-24 bg-white border-b border-zinc-200/80 relative overflow-hidden bg-grid-pattern"
       aria-labelledby="contact-heading"
     >
       {/* Decorative soft purple block */}
@@ -44,8 +44,8 @@ export const Contact: React.FC = () => {
       <div className="max-w-6xl mx-auto px-6 sm:px-8 relative z-10">
         
         {/* Eyebrow & Header */}
-        <div className="text-center max-w-2xl mx-auto mb-14 sm:mb-16">
-          <div className="inline-flex items-center gap-2 mb-3.5">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
+          <div className="inline-flex items-center gap-2 mb-2.5">
             <span className="w-2 h-2 rounded-full bg-purple-600 animate-pulse" />
             <span className="text-xs font-mono-meta font-semibold text-purple-700 uppercase tracking-widest">
               06 / Get in Touch
@@ -54,7 +54,7 @@ export const Contact: React.FC = () => {
 
           <h2
             id="contact-heading"
-            className="font-display text-3xl sm:text-4xl lg:text-[42px] font-extrabold tracking-tight text-zinc-950 mb-4 leading-tight"
+            className="font-display text-2xl sm:text-3xl lg:text-[38px] font-extrabold tracking-tight text-zinc-950 mb-3.5 leading-tight"
           >
             Let's Connect<span className="text-purple-600">.</span>
           </h2>
@@ -65,10 +65,10 @@ export const Contact: React.FC = () => {
         </div>
 
         {/* 3 Main Direct Channels */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-14 sm:mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 max-w-5xl mx-auto mb-10 sm:mb-12">
           
           {/* Email Card with Copy button */}
-          <div className="p-7 sm:p-8 rounded-2xl sm:rounded-3xl bg-white border border-zinc-200/90 shadow-[0_2px_10px_rgba(20,20,40,0.025)] hover:border-purple-300 hover:shadow-[0_16px_36px_-8px_rgba(124,58,237,0.08)] hover:-translate-y-1 transition-all flex flex-col justify-between group">
+          <div className="p-6 sm:p-7 rounded-2xl sm:rounded-3xl bg-white border border-zinc-200/90 shadow-[0_2px_10px_rgba(20,20,40,0.025)] hover:border-purple-300 hover:shadow-[0_16px_36px_-8px_rgba(124,58,237,0.08)] hover:-translate-y-1 transition-all flex flex-col justify-between group">
             <div>
               <div className="w-10 h-10 rounded-xl bg-purple-50 text-purple-700 flex items-center justify-center mb-5 shadow-2xs">
                 <Mail className="w-5 h-5" />
@@ -104,7 +104,7 @@ export const Contact: React.FC = () => {
             href={PERSONAL_INFO.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-7 sm:p-8 rounded-2xl sm:rounded-3xl bg-white border border-zinc-200/90 shadow-[0_2px_10px_rgba(20,20,40,0.025)] hover:border-purple-300 hover:shadow-[0_16px_36px_-8px_rgba(124,58,237,0.08)] hover:-translate-y-1 transition-all flex flex-col justify-between group"
+            className="p-6 sm:p-7 rounded-2xl sm:rounded-3xl bg-white border border-zinc-200/90 shadow-[0_2px_10px_rgba(20,20,40,0.025)] hover:border-purple-300 hover:shadow-[0_16px_36px_-8px_rgba(124,58,237,0.08)] hover:-translate-y-1 transition-all flex flex-col justify-between group"
           >
             <div>
               <div className="w-10 h-10 rounded-xl bg-purple-50 text-purple-700 flex items-center justify-center mb-5 shadow-2xs">
@@ -132,7 +132,7 @@ export const Contact: React.FC = () => {
             href={PERSONAL_INFO.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-7 sm:p-8 rounded-2xl sm:rounded-3xl bg-white border border-zinc-200/90 shadow-[0_2px_10px_rgba(20,20,40,0.025)] hover:border-purple-300 hover:shadow-[0_16px_36px_-8px_rgba(124,58,237,0.08)] hover:-translate-y-1 transition-all flex flex-col justify-between group"
+            className="p-6 sm:p-7 rounded-2xl sm:rounded-3xl bg-white border border-zinc-200/90 shadow-[0_2px_10px_rgba(20,20,40,0.025)] hover:border-purple-300 hover:shadow-[0_16px_36px_-8px_rgba(124,58,237,0.08)] hover:-translate-y-1 transition-all flex flex-col justify-between group"
           >
             <div>
               <div className="w-10 h-10 rounded-xl bg-purple-50 text-purple-700 flex items-center justify-center mb-5 shadow-2xs">
@@ -158,7 +158,7 @@ export const Contact: React.FC = () => {
         </div>
 
         {/* Quick Message Box */}
-        <div className="max-w-xl mx-auto p-7 sm:p-9 rounded-2xl sm:rounded-3xl bg-[#fafafc] border border-zinc-200/90 shadow-[0_2px_10px_rgba(20,20,40,0.02)]">
+        <div className="max-w-xl mx-auto p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-[#fafafc] border border-zinc-200/90 shadow-[0_2px_10px_rgba(20,20,40,0.02)]">
           <h4 className="text-base font-bold text-zinc-900 mb-1.5 text-center tracking-tight">
             Quick Inquiry
           </h4>
